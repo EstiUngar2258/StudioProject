@@ -22,6 +22,7 @@ public class Startup
         services.AddScoped<IBL, BLManager>(); // שונה ל-Scoped
         services.AddScoped<IBLClient, BLClientService>(); // שונה ל-Scoped
         services.AddScoped<BLUserService>(); // שונה ל-Scoped
+        services.AddScoped<BLFullQueueService>();
 
         // הוספת DbContext עם מחרוזת החיבור
         services.AddDbContext<DatabaseManager>(options =>

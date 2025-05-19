@@ -520,3 +520,4 @@ H:\פרויקט גמר\Backend\Server\obj\Debug\net8.0\refint\Server.dll
 H:\פרויקט גמר\Backend\Server\obj\Debug\net8.0\Server.pdb
 H:\פרויקט גמר\Backend\Server\obj\Debug\net8.0\Server.genruntimeconfig.cache
 H:\פרויקט גמר\Backend\Server\obj\Debug\net8.0\ref\Server.dll
+H:\פרויקט גמר\Backend\Server\obj\Debug\net8.0\Server.sourcelink.json

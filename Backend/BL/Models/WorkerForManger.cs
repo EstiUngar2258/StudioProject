@@ -8,5 +8,9 @@ namespace BL.Models
 {
     public class WorkerForManger
     {
-    }
+          
+        }
 }
+
+
+

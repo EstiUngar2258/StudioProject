@@ -113,3 +113,29 @@ export const postAsync = createAsyncThunk(
         }
     }
 );
+
+export const fetchAppointmentsAsync = createAsyncThunk(
+    'appointments/fetchAppointments',
+    async (_, { rejectWithValue }) => {
+        try {
+            const response = await getAsync('Appointments'); // קריאה ל-getAsync
+            return response; // החזרת התורים
+        } catch (error) {
+            console.error('Error fetching appointments:', error); // לוג לדיבוג
+            return rejectWithValue(handleErrorResponse(error));
+        }
+    }
+);
+
+export const addAppointmentAsync = createAsyncThunk(
+    'appointments/addAppointment',
+    async (newAppointment, { rejectWithValue }) => {
+        try {
+            const response = await postAsync({ endpoint: 'Appointments', body: newAppointment }); // קריאה ל-postAsync
+            return response; // החזרת התור שנוסף
+        } catch (error) {
+            console.error('Error adding appointment:', error); // לוג לדיבוג
+            return rejectWithValue(handleErrorResponse(error));
+        }
+    }
+);

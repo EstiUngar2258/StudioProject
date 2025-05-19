@@ -16,3 +16,13 @@ export const loginUser = async (credentials) => {
     const response = await axios.post('http://localhost:5235/api/User/Login', credentials);
     return response.data; // מחזיר את הנתונים של המשתמש שנכנס
 };
+
+export const fetchAppointments = async () => {
+    const response = await axios.get('http://localhost:5235/api/FullQueue');
+    return response.data; // מחזיר את הנתונים של התורים
+};
+
+export const addAppointment = async (appointmentData) => {
+    const response = await axios.post('http://localhost:5235/api/FullQueue', appointmentData);
+    return response.data; // מחזיר את הנתונים של התור שנוסף
+};

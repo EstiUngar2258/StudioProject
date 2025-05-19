@@ -10,5 +10,6 @@ namespace BL.Api
     public interface IBL
     {
         public IBLClient Client { get; }
+        public IBLFullQueue FullQueue { get; }
     }
 }

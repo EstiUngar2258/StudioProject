@@ -10,9 +10,9 @@ namespace Dal.Api
     {
        public IClient Client { get; }
         public IWorker Worker { get; }
-        public IFullQueue fullQueue { get; }
-        public IFreeQueue freeQueue { get; }
-        public IStudioService studioService { get; }
+        public IFullQueue FullQueue { get; }
+        public IFreeQueue FreeQueue { get; }
+        public IStudioService StudioService { get; }
 
     }
 }

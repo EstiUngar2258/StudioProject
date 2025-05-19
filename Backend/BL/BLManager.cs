@@ -12,6 +12,8 @@ namespace BL
     {
         public IBLUser User { get; }
         public IBLClient Client { get; }
+
+        public IBLFullQueue FullQueue { get; }
         public BLManager()
         {
             ServiceCollection services = new ServiceCollection();

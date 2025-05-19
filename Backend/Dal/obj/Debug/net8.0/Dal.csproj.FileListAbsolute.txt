@@ -97,3 +97,4 @@ H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
 H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.pdb
 H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
 H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json

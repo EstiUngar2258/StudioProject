@@ -11,11 +11,11 @@ namespace Dal
 
         public IWorker Worker { get; }
 
-        public IFullQueue fullQueue { get; }
+        public IFullQueue FullQueue { get; }
 
-        public IFreeQueue freeQueue { get; }
+        public IFreeQueue FreeQueue { get; }
 
-        public IStudioService studioService { get; }
+        public IStudioService StudioService { get; }
         public DalManager()
         {
             ServiceCollection services = new ServiceCollection();

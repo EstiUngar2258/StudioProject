@@ -107,3 +107,4 @@ H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.dll
 H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\refint\BL.dll
 H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.pdb
 H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\ref\BL.dll
+H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json

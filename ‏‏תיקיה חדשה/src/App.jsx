@@ -8,6 +8,8 @@ import Services from './components/Services';
 import AddClient from './components/AddClient';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import CreateAppointmentForm from './components/CreateAppointmentForm';
+import AppointmentList from './components/AppointmentList';
 
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
         <Route path="/addClient" element={<AddClient />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
+        <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
       </Routes>
 
     </BrowserRouter>

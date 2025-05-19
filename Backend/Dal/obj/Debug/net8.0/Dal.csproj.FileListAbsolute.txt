@@ -1,0 +1,99 @@
+H:\ProjectC#\Studio\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\ProjectC#\Studio\Dal\bin\Debug\net8.0\Dal.dll
+H:\ProjectC#\Studio\Dal\bin\Debug\net8.0\Dal.pdb
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.dll
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\Dal.pdb
+H:\ProjectC#\Studio\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\C#project\Studio\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\C#project\Studio\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\C#project\Studio\Dal\bin\Debug\net8.0\Dal.dll
+H:\C#project\Studio\Dal\bin\Debug\net8.0\Dal.pdb
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.dll
+H:\C#project\Studio\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.pdb
+H:\C#project\Studio\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\C#project\Studio\Dal\obj\Debug\net8.0\ref\Dal.dll
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.dll
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.dll
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\projectC\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\projectC\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\projectC\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.dll
+H:\projectC\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.dll
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\projectC\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.dll
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.dll
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\פרויקט גמר\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\פרויקט גמר\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\פרויקט גמר\Backend\Dal\bin\Debug\net8.0\Dal.dll
+H:\פרויקט גמר\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.dll
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\פרויקט גמר\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll

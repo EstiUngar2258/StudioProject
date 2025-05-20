@@ -10,5 +10,8 @@ namespace Dal.Api
     public interface IFreeQueue:ICrud<FreeQueue>
     {
 
+        public FreeQueue GetQueueByDate(DateOnly dateOnly,TimeOnly timeOnly);
+
+
     }
 }

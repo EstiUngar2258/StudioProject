@@ -32,8 +32,10 @@ namespace Dal.Services
             var entity = _databaseManager.Clients.FirstOrDefault(e => e.Id == id);
             if (entity == null)
             {
-                Console.WriteLine("The user not find");
-                return;
+               
+
+                throw new KeyNotFoundException($"Entity with ID {id} not found.");
+
             }
 
             _databaseManager.Clients.Remove(entity);
@@ -53,8 +55,10 @@ namespace Dal.Services
             var entity = _databaseManager.Clients.FirstOrDefault(e => e.Id == id);
             if (entity == null)
             {
-                Console.WriteLine("The user not find");
-                return null;
+               
+
+                throw new KeyNotFoundException($"Entity with ID {id} not found.");
+
             }
 
             return entity;
@@ -62,12 +66,15 @@ namespace Dal.Services
 
         public void Update(Client entity)
         {
-            var entityOld = _databaseManager.Clients.Find(entity.Id);
-            if (entityOld == null) 
+
+            if (entity == null)
             {
-                Console.WriteLine("The user not found");
-                throw new KeyNotFoundException("The user not found");
+                throw new ArgumentNullException(nameof(entity), "The entity cannot be null.");
             }
+
+            var entityOld = _databaseManager.Clients.FirstOrDefault(e => e.Id == entity.Id)
+                ?? throw new KeyNotFoundException($"Client with ID {entity.Id} not found.");
+
 
             // עדכון המאפיינים
             entityOld.Email = entity.Email;

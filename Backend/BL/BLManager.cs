@@ -12,7 +12,7 @@ namespace BL
     {
         public IBLUser User { get; }
         public IBLClient Client { get; }
-
+        public IBLFreeQueue FreeQueue { get; }
         public IBLFullQueue FullQueue { get; }
         public BLManager()
         {

@@ -20,7 +20,8 @@ namespace BL.Services
 
         }
 
-        public bool ClientOK(Client client) {
+        public bool ClientOK(Client client)
+        {
             // בדוק אם FirstName ו-LastName לא ריקים
             if (string.IsNullOrWhiteSpace(client.FirstName))
             {
@@ -54,9 +55,9 @@ namespace BL.Services
 
         public void Add(Client client)
         {
-          if (ClientOK( client))
+            if (ClientOK(client))
 
-            _client.Add(client);
+                _client.Add(client);
         }
 
         public IEnumerable<ClientForManager> GetAllForManager()
@@ -70,28 +71,50 @@ namespace BL.Services
 
         public ClientForManager GetByIdForManager(int id)
         {
-            //if (id < 100000000 || id > 999999999)
-            //{
-            //    throw new ArgumentException("Id number must be a valid 10-digit number.", nameof(id)); // לא תקין
-            //}
-            Client c= _client.GetById(id);
-            ClientForManager clientForManager = new ClientForManager() {
-                Id=c.Id,
-                FirstName=c.FirstName,
-                LastName=c.LastName,
-                Phone=c.Phone,
-                Age=c.Age,
-                Email=c.Email,
-            };
-            return clientForManager;
 
+            // אם תרצה לבדוק אם ה-ID תקין, תוכל להפעיל את הקוד המושבת כאן
+
+            try
+            {
+                Client c = _client.GetById(id);
+                ClientForManager clientForManager = new ClientForManager()
+                {
+                    Id = c.Id,
+                    FirstName = c.FirstName,
+                    LastName = c.LastName,
+                    Phone = c.Phone,
+                    Age = c.Age,
+                    Email = c.Email,
+                };
+                return clientForManager;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                // אפשר להחזיר null, לזרוק שגיאה חדשה, או כל טיפול אחר שאתה רוצה לבצע
+                return null; // או לזרוק שגיאה חדשה
+            }
 
         }
         public void Update(Client entity)
         {
-            if (ClientOK(entity))
-                _client.Update(entity);
-        }
 
+            
+                try
+                {
+                    _client.Update(entity);
+                }
+                catch (KeyNotFoundException ex)
+                {
+                    // טיפול בשגיאה במקרה שהישות לא נמצאה
+                    throw new InvalidOperationException($"Update failed: {ex.Message}", ex);
+                }
+
+            
+
+
+
+        }
     }
 }

@@ -14,17 +14,22 @@ namespace BL
         public IBLClient Client { get; }
         public IBLFreeQueue FreeQueue { get; }
         public IBLFullQueue FullQueue { get; }
-        public BLManager()
+        public BLManager( string connectiondb)
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddSingleton<IDal, DalManager>();
+            services.AddSingleton<IDal>(d=>new  DalManager(connectiondb));
             services.AddSingleton<IBLClient, BLClientService>();
             services.AddSingleton<DatabaseManager>();
             services.AddSingleton<IBLUser,BLUserService>();
+            services.AddSingleton<IBLFreeQueue, BLFreeQueueService>();
+            services.AddSingleton<IBLFullQueue, BLFullQueueService>();
+
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             Client = serviceProvider.GetService<IBLClient>();
             User = serviceProvider.GetService<IBLUser>();
+            FullQueue = serviceProvider.GetService<IBLFullQueue>();
+            FreeQueue = serviceProvider.GetService<IBLFreeQueue>();
 
         }
     }

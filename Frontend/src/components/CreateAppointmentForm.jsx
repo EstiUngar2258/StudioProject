@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addAppointment } from '../redux/appointmentsSlice';
 import { startOfToday, addMonths } from 'date-fns';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const CreateAppointmentForm = () => {
     const [appointmentData, setAppointmentData] = useState({
@@ -34,77 +35,126 @@ const CreateAppointmentForm = () => {
         }
     };
 
-    const today = startOfToday(); // מקבל את התאריך של היום
-    const minDate = today.toISOString().split("T")[0]; // ממיר ל-ISO ומקבל את התאריך בפורמט YYYY-MM-DD
+    const today = startOfToday();
+    const minDate = today.toISOString().split("T")[0];
     const oneMonthFromToday = addMonths(today, 1).toISOString().split("T")[0];
 
     return (
-        <form onSubmit={handleSubmit} className="container mt-4">
-            <h2>צור תור חדש</h2>
-            <div className="form-group">
-                <label htmlFor="clientId">Client ID:</label>
-                <input
-                    type="number"
-                    id="clientId"
-                    name="clientId"
-                    className="form-control"
-                    value={appointmentData.clientId}
-                    onChange={handleChange}
-                    required
-                />
+        <div className="container py-5" style={{ minHeight: "100vh", background: "linear-gradient(135deg, #f8fafc 0%, #a18cd1 100%)" }}>
+            <div className="row justify-content-center">
+                <div className="col-md-7 col-lg-6">
+                    <div className="card shadow-lg border-0 rounded-4" style={{ background: "linear-gradient(120deg, #fdf6e3 0%, #f5f7fa 100%)" }}>
+                        <div className="card-body p-5">
+                            <h2 className="mb-4 text-center"
+                                style={{
+                                    fontFamily: "'Rubik', 'Heebo', Arial, sans-serif",
+                                    fontWeight: 700,
+                                    color: "#6a3093",
+                                    textShadow: "1px 1px 8px #e0c3fc"
+                                }}>
+                                <i className="bi bi-calendar-plus me-2" style={{ color: "#6a3093" }}></i>
+                                צור תור חדש
+                            </h2>
+                            <form onSubmit={handleSubmit}>
+                                <div className="mb-3">
+                                    <label className="form-label fw-bold" htmlFor="clientId" style={{ color: "#6a3093" }}>מספר לקוח</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-person" style={{ color: "#6a3093" }}></i></span>
+                                        <input
+                                            type="number"
+                                            id="clientId"
+                                            name="clientId"
+                                            className="form-control"
+                                            value={appointmentData.clientId}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ background: "#f8fafc" }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label className="form-label fw-bold" htmlFor="serviceId" style={{ color: "#6a3093" }}>מספר שירות</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-music-note-beamed" style={{ color: "#6a3093" }}></i></span>
+                                        <input
+                                            type="number"
+                                            id="serviceId"
+                                            name="serviceId"
+                                            className="form-control"
+                                            value={appointmentData.serviceId}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ background: "#f8fafc" }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label className="form-label fw-bold" htmlFor="workerId" style={{ color: "#6a3093" }}>מספר עובד</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-people" style={{ color: "#6a3093" }}></i></span>
+                                        <input
+                                            type="number"
+                                            id="workerId"
+                                            name="workerId"
+                                            className="form-control"
+                                            value={appointmentData.workerId}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ background: "#f8fafc" }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label className="form-label fw-bold" htmlFor="date" style={{ color: "#6a3093" }}>תאריך</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-calendar-event" style={{ color: "#6a3093" }}></i></span>
+                                        <input
+                                            type="date"
+                                            id="date"
+                                            name="date"
+                                            className="form-control"
+                                            value={appointmentData.date}
+                                            onChange={handleChange}
+                                            required
+                                            min={minDate}
+                                            max={oneMonthFromToday}
+                                            style={{ background: "#f8fafc" }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="mb-4">
+                                    <label className="form-label fw-bold" htmlFor="time" style={{ color: "#6a3093" }}>שעה</label>
+                                    <div className="input-group">
+                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-clock" style={{ color: "#6a3093" }}></i></span>
+                                        <input
+                                            type="time"
+                                            id="time"
+                                            name="time"
+                                            className="form-control"
+                                            value={appointmentData.time}
+                                            onChange={handleChange}
+                                            required
+                                            style={{ background: "#f8fafc" }}
+                                        />
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                    className="btn w-100 py-2 fw-bold rounded-pill shadow"
+                                    style={{
+                                        background: "linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%)",
+                                        color: "#fff",
+                                        fontSize: "1.2rem",
+                                        letterSpacing: "1px"
+                                    }}>
+                                    <i className="bi bi-check-circle me-2"></i>
+                                    הוסף תור
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="form-group">
-                <label htmlFor="serviceId">Service ID:</label>
-                <input
-                    type="number"
-                    id="serviceId"
-                    name="serviceId"
-                    className="form-control"
-                    value={appointmentData.serviceId}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="workerId">Worker ID:</label>
-                <input
-                    type="number"
-                    id="workerId"
-                    name="workerId"
-                    className="form-control"
-                    value={appointmentData.workerId}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="date">תאריך:</label>
-                <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    className="form-control"
-                    value={appointmentData.date}
-                    onChange={handleChange}
-                    required
-                    min={minDate} // מאפשר לבחור תאריך מהיום ואילך
-                    max={oneMonthFromToday}
-                />
-            </div>
-            <div className="form-group">
-                <label htmlFor="time">שעה:</label>
-                <input
-                    type="time"
-                    id="time"
-                    name="time"
-                    className="form-control"
-                    value={appointmentData.time}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-            <button type="submit" className="btn btn-primary">הוסף תור</button>
-        </form>
+        </div>
     );
 };
 

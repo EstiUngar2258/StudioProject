@@ -4,10 +4,14 @@ import AvailableAppointmentItem from './AvailableAppointmentItem';
 import FullAppointmentItem from './FullAppointmentItem';
 
 const AppointmentList = () => {
-    const appointments = useSelector((state) => state.appointments);
+    const appointments = useSelector((state) => state.appointments) || [];
 
-    const availableAppointments = appointments.filter(appointment => appointment.status === 'scheduled');
-    const bookedAppointments = appointments.filter(appointment => appointment.status !== 'scheduled');
+    const availableAppointments = appointments.filter(
+        (appointment) => appointment && appointment.status === 'scheduled'
+    );
+    const bookedAppointments = appointments.filter(
+        (appointment) => appointment && appointment.status !== 'scheduled'
+    );
 
     return (
         <div className="appointment-list">

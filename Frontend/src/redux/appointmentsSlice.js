@@ -1,7 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { fetchAvailableAppointmentsByDateAsync } from './thunk';
 
 const initialState = {
     appointments: [], // כל התורים
+    availableByDate: {
+        appointments: [],
+        loading: false,
+        error: null,
+    },
 };
 
 const appointmentsSlice = createSlice({
@@ -29,6 +35,21 @@ const appointmentsSlice = createSlice({
         getAppointmentById: (state, action) => {
             return state.appointments.find(app => app.id === action.payload); // קבלת תור לפי ID
         },
+    },
+    extraReducers: (builder) => {
+        builder
+            .addCase(fetchAvailableAppointmentsByDateAsync.pending, (state) => {
+                state.availableByDate.loading = true;
+                state.availableByDate.error = null;
+            })
+            .addCase(fetchAvailableAppointmentsByDateAsync.fulfilled, (state, action) => {
+                state.availableByDate.loading = false;
+                state.availableByDate.appointments = action.payload;
+            })
+            .addCase(fetchAvailableAppointmentsByDateAsync.rejected, (state, action) => {
+                state.availableByDate.loading = false;
+                state.availableByDate.error = action.payload;
+            });
     },
 });
 

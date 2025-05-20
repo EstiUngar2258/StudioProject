@@ -33,20 +33,20 @@ export const fetchDataAsyncAction = createAsyncThunk(
     }
 );
 
-// פונקציה לאימות נתונים
-const validateClient = (client) => {
-    if (!client.name || !client.email) {
-        throw new Error('Name and email are required');
-    }
-    // ניתן להוסיף אימותים נוספים לפי הצורך
-};
+// // פונקציה לאימות נתונים
+// const validateClient = (client) => {
+//     if (!client.name || !client.email) {
+//         throw new Error('Name and email are required');
+//     }
+//     // ניתן להוסיף אימותים נוספים לפי הצורך
+// };
 
 // Thunk להוספת קליינט
 export const addClientAsync = createAsyncThunk(
     'clients/addClient',
     async (newClient, { rejectWithValue }) => {
         try {
-           validateClient(newClient); // אימות נתונים לפני שליחה
+        //    validateClient(newClient); // אימות נתונים לפני שליחה
             const response = await addClient(newClient); // קריאה ל-API
             return response.data; // החזרת הקליינט שנוסף
         } catch (error) {
@@ -135,6 +135,22 @@ export const addAppointmentAsync = createAsyncThunk(
             return response; // החזרת התור שנוסף
         } catch (error) {
             console.error('Error adding appointment:', error); // לוג לדיבוג
+            return rejectWithValue(handleErrorResponse(error));
+        }
+    }
+);
+
+export const fetchAvailableAppointmentsByDateAsync = createAsyncThunk(
+    'appointments/fetchAvailableByDate',
+    async ({ dateOnly, timeOnly }, { rejectWithValue }) => {
+        try {
+            const response = await apiClient.post(
+                '/Appointments/available',
+                { dateOnly, timeOnly }
+            );
+            return response.data;
+        } catch (error) {
+            console.error('Error fetching available appointments:', error);
             return rejectWithValue(handleErrorResponse(error));
         }
     }

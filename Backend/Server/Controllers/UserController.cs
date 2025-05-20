@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using BL.Models;
+using BL.Api;
 
 namespace Server.Controllers
 {
@@ -8,11 +9,11 @@ namespace Server.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly BLUserService _userService;
+        private readonly IBLUser _userService;
 
-        public UserController(BLUserService userService)
+        public UserController(IBL userService)
         {
-            _userService = userService;
+            _userService = userService.User;
         }
 
         [HttpPost("Login")]

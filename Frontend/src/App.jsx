@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
 import About from './components/About';
@@ -10,6 +9,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import CreateAppointmentForm from './components/CreateAppointmentForm';
 import AppointmentList from './components/AppointmentList';
+import AvailableAppointmentsList from "./components/AvailableAppointmentsList";
 
 
 const App = () => {
@@ -26,6 +26,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
         <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
+        <Route path="/availableAppointments" element={<AvailableAppointmentsList />} /> // הוספת המסלול החדש
       </Routes>
 
     </BrowserRouter>

@@ -23,32 +23,33 @@ namespace Server.Controllers
         [HttpGet]
             public ActionResult<List<FullQueue>> GetAll()
             {
+
                 var items = fullQueueService.GetAllForManager();
                 return Ok(items);
             }
 
-            //[HttpGet("{id}")]
-            //public ActionResult<v> GetById(int id)
-            //{
-            //    var item = queueService.GetItemById(id);
-            //    if (item == null)
-            //    {
-            //        return NotFound();
-            //    }
-            //    return Ok(item);
-            //}
+        //[HttpGet("{id}")]
+        //public ActionResult<> GetById(int id)
+        //{
+        //    var item = queueService.GetItemById(id);
+        //    if (item == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return Ok(item);
+        //}
 
-            //[HttpPost]
-            //public ActionResult<FullQueue> Add([FromBody] FullQueue item)
-            //{
-            //    if (item == null)
-            //    {
-            //        return BadRequest("Queue item cannot be null");
-            //    }
+        //[HttpPost]
+        //public ActionResult<FullQueue> Add([FromBody] FullQueue item)
+        //{
+        //    if (item == null)
+        //    {
+        //        return BadRequest("Queue item cannot be null");
+        //    }
 
-            //fullQueueService.Add(FreeQueue freeQueue, int workerId, int clientId, int serviceId, string status);
-            //    return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
-            //}
+        //fullQueueService.Add(FreeQueue freeQueue, int workerId, int clientId, int serviceId, string status);
+        //    return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
+        //}
 
         //    [HttpPut("{id}")]
         //    public ActionResult Update(int id, [FromBody] QueueItem item)

@@ -1,13 +1,14 @@
 ﻿using BL.Api;
 using BL.Models;
+using Dal.Api;
 using Dal.models;
 
 public class BLUserService: IBLUser
 {
 
-        private readonly DatabaseManager _context;
+        private readonly IDal _context;
 
-    public BLUserService(DatabaseManager context)
+    public BLUserService(IDal context)
     {
         _context = context;
     }
@@ -15,7 +16,7 @@ public class BLUserService: IBLUser
     public User GetUserDetails(LoginRequest request)
     {
         // חיפוש בלקוחות
-        var client = _context.Clients.FirstOrDefault(c => c.FirstName == request.Name && c.Id == request.IdNumber);
+        var client = _context.Client.GetAll().ToList().FirstOrDefault(c => c.FirstName == request.Name && c.Id == request.IdNumber);
         if (client != null)
         {
             return new User
@@ -27,7 +28,7 @@ public class BLUserService: IBLUser
         }
 
         // חיפוש בעובדים
-        var worker = _context.Workers.FirstOrDefault(e => e.FirstName == request.Name && e.Id == request.IdNumber);
+        var worker = _context.Worker.GetAll().ToList().FirstOrDefault(e => e.FirstName == request.Name && e.Id == request.IdNumber);
         if (worker != null)
         {
             return new User

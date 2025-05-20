@@ -5,6 +5,7 @@ using Dal.Api;
 using Dal.models;
 using Dal;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 public class Startup
 {
@@ -18,15 +19,15 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
-        services.AddSingleton<IDal, DalManager>();
-        services.AddScoped<IBL, BLManager>(); // שונה ל-Scoped
-        services.AddScoped<IBLClient, BLClientService>(); // שונה ל-Scoped
-        services.AddScoped<BLUserService>(); // שונה ל-Scoped
-        services.AddScoped<BLFullQueueService>();
+        //services.AddSingleton<IDal, DalManager>();
+        services.AddScoped<IBL> ( bl=> new BLManager(_configuration.GetConnectionString("DefaultConnection"))); // שונה ל-Scoped
+        //services.AddScoped<IBLClient, BLClientService>(); // שונה ל-Scoped
+       // services.AddScoped<BLUserService>(); // שונה ל-Scoped
+        //services.AddScoped<BLFullQueueService>();
 
         // הוספת DbContext עם מחרוזת החיבור
-        services.AddDbContext<DatabaseManager>(options =>
-            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+        //services.AddDbContext<DatabaseManager>(options =>
+        //    options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
         // הוספת הגדרת CORS
         services.AddCors(options =>
@@ -37,6 +38,7 @@ public class Startup
                                   .AllowAnyHeader());
         });
     }
+
 
     public void Configure(IApplicationBuilder app)
     {

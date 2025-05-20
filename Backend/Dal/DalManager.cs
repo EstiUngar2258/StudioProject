@@ -1,6 +1,7 @@
 ﻿using Dal.Api;
 using Dal.models;
 using Dal.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Dal
@@ -16,17 +17,21 @@ namespace Dal
         public IFreeQueue FreeQueue { get; }
 
         public IStudioService StudioService { get; }
-        public DalManager()
+        public DalManager(string connectiondb)
         {
             ServiceCollection services = new ServiceCollection();
-            services.AddSingleton<DatabaseManager>();
+            services.AddDbContext <DatabaseManager>( options =>options.UseSqlServer(connectiondb));
             services.AddSingleton<IClient, ClientService>();
             services.AddSingleton<IWorker, WorkerService>();
+            services.AddSingleton<IFullQueue, FullQueueService>();
+            services.AddSingleton<IFreeQueue, FreeQueueService>();
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
 
             Client = serviceProvider.GetService<IClient>();
             Worker = serviceProvider.GetService<IWorker>();
+            FullQueue = serviceProvider.GetService<IFullQueue>();
+            FreeQueue = serviceProvider.GetService<IFreeQueue>();
         }
     }
 }

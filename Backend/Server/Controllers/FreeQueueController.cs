@@ -42,6 +42,7 @@ namespace Server.Controllers
             freeQueueService.Add(freeQueue);
             return freeQueue;
         }
+
         [HttpGet("id:{workerID}")]
         public ActionResult<FreeQueueForWorker> GetFreeQueuesForWorker(int workerID){
 

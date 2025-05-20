@@ -13,7 +13,7 @@ namespace BL.Services
     public class BLFullQueueService : IBLFullQueue
     {
 
-        IFullQueue _fullqueue;
+        private readonly IFullQueue _fullqueue;
 
         public BLFullQueueService(IDal dal)
         {
@@ -24,7 +24,7 @@ namespace BL.Services
 
         public void Add(FreeQueue freeQueue, int clientId, int serviceId, string status)
         {
-            FullQueue fullQueue = new FullQueue
+            FullQueue fullQueue = new()
             {
                
                 DateTime = freeQueue.DateTime, // הנחה שהתאריך מגיע מאובייקט התור הריק

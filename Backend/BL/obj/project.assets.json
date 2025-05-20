@@ -2815,23 +2815,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\אונגר אסתר\\.nuget\\packages\\": {},
+    "C:\\Users\\User\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\פרויקט גמר\\Backend\\BL\\BL.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\BL.csproj",
       "projectName": "BL",
-      "projectPath": "H:\\פרויקט גמר\\Backend\\BL\\BL.csproj",
-      "packagesPath": "C:\\Users\\אונגר אסתר\\.nuget\\packages\\",
-      "outputPath": "H:\\פרויקט גמר\\Backend\\BL\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\BL.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\אונגר אסתר\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2847,8 +2847,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "H:\\פרויקט גמר\\Backend\\Dal\\Dal.csproj": {
-              "projectPath": "H:\\פרויקט גמר\\Backend\\Dal\\Dal.csproj"
+            "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj"
             }
           }
         }
@@ -2862,7 +2862,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -2883,7 +2884,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

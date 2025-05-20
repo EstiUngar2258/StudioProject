@@ -70,7 +70,7 @@ namespace Dal.Services
             existingEntity.Worker = entity.Worker;
 
 
-            _databaseManager.SaveChanges(); // הנחה שיש שיטה לשמירה בבסיס הנתונים
+            _databaseManager.SaveChanges(); 
         }
 
         public FreeQueue GetQueueByDate(DateOnly dateOnly, TimeOnly timeOnly)

@@ -12,7 +12,7 @@ namespace BL.Services
 {
     public class BLFreeQueueService : IBLFreeQueue
     {
-        IFreeQueue _freeQueue;
+        private readonly IFreeQueue _freeQueue;
         public BLFreeQueueService(IDal dal)
         {
             _freeQueue = dal.FreeQueue;
@@ -62,7 +62,7 @@ namespace BL.Services
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _freeQueue.GetAll().ToList().Clear();
         }
 
 
@@ -72,7 +72,7 @@ namespace BL.Services
             try
             {
                 FreeQueue c = _freeQueue.GetQueueByDate(dateOnly, timeOnly);
-                FreeQueueForClient freeQueueForClient = new FreeQueueForClient()
+                FreeQueueForClient freeQueueForClient = new ()
                 {
                     Id = c.Id,
                     DateTime = c.DateTime,
@@ -95,7 +95,7 @@ namespace BL.Services
             try
             {
                 FreeQueue c = _freeQueue.GetQueueByDate(dateOnly, timeOnly);
-                FreeQueueForWorker freeQueueForWorker = new FreeQueueForWorker()
+                FreeQueueForWorker freeQueueForWorker = new()
                 {
                     Id = c.Id,
                     DateTime = c.DateTime,

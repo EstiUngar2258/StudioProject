@@ -1,88 +1,96 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\controllers\\freequeuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\controllers\\freequeuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\controllers\\fullqueuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\controllers\\fullqueuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\services\\fullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\services\\fullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\services\\freequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\services\\freequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\api\\icrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\api\\icrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\api\\icrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\models\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\models\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\models\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\controllers\\fullqueuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\controllers\\fullqueuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\dalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\dalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\dalmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\blmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\server\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\api\\ibluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\api\\ibluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\api\\ibluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\api\\idal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\api\\idal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\api\\idal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\api\\iblfullqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\api\\iblfullqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\api\\iblfullqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\api\\ibl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\api\\ibl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\api\\ibl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\services\\bluserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\services\\bluserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\bluserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\services\\freequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\services\\freequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\dal\\api\\ifreequeue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\dal\\api\\ifreequeue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94A00438-D900-48F3-890F-22F2BEEDE4A3}|Dal\\Dal.csproj|solutionrelative:dal\\api\\ifreequeue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|h:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\backend\\bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -96,17 +104,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "ICrud.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\ICrud.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\ICrud.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\ICrud.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\ICrud.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\ICrud.cs",
               "RelativeToolTip": "Dal\\Api\\ICrud.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T12:01:50.799Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -114,254 +121,266 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.FullQueue [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql",
-              "ToolTip": "dbo.FullQueue [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-20T13:23:08.468Z",
+              "DocumentIndex": 4,
+              "Title": "FullQueueService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Services\\FullQueueService.cs",
+              "RelativeDocumentMoniker": "Dal\\Services\\FullQueueService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Services\\FullQueueService.cs",
+              "RelativeToolTip": "Dal\\Services\\FullQueueService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwDkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:45:55.461Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.FreeQueue [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql",
-              "ToolTip": "dbo.FreeQueue [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-20T13:22:25.403Z",
+              "Title": "FreeQueueController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\FreeQueueController.cs",
+              "RelativeDocumentMoniker": "Server\\Controllers\\FreeQueueController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\FreeQueueController.cs",
+              "RelativeToolTip": "Server\\Controllers\\FreeQueueController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:45:41.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Server",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Server.csproj",
+              "Title": "dbo.FullQueue.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-20T13:23:08.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "dbo.FreeQueue.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/H__\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-20T13:22:25.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Server.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Server.csproj",
               "RelativeDocumentMoniker": "Server\\Server.csproj",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Server.csproj",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Server.csproj",
               "RelativeToolTip": "Server\\Server.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-05-20T12:59:42.578Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Program.cs",
               "RelativeDocumentMoniker": "Server\\Program.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Program.cs",
               "RelativeToolTip": "Server\\Program.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T13:03:26.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T13:03:26.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ClientsController.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Controllers\\ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\ClientsController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\ClientsController.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\ClientsController.cs",
               "RelativeToolTip": "Server\\Controllers\\ClientsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T12:27:32.513Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DatabaseManager.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\models\\DatabaseManager.cs",
-              "RelativeDocumentMoniker": "Dal\\models\\DatabaseManager.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\models\\DatabaseManager.cs",
-              "RelativeToolTip": "Dal\\models\\DatabaseManager.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAYwBkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T12:10:02.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Startup.cs",
-              "RelativeDocumentMoniker": "Server\\Startup.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Startup.cs",
-              "RelativeToolTip": "Server\\Startup.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T12:09:27.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T12:27:32.513Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\models\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "Dal\\models\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\models\\DatabaseManager.cs",
+              "RelativeToolTip": "Dal\\models\\DatabaseManager.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAYwBkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:10:02.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Startup.cs",
+              "RelativeDocumentMoniker": "Server\\Startup.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Startup.cs",
+              "RelativeToolTip": "Server\\Startup.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABQAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:09:27.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\appsettings.json",
               "RelativeDocumentMoniker": "Server\\appsettings.json",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\appsettings.json",
               "RelativeToolTip": "Server\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAWAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAADaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-20T11:52:14.056Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "BLFullQueueService.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLFullQueueService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFullQueueService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLFullQueueService.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLFullQueueService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFullQueueService.cs",
               "RelativeToolTip": "BL\\Services\\BLFullQueueService.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCwAAAAMAAAA",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwA8AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T11:49:51.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "IDal.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\IDal.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\IDal.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IDal.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\IDal.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\IDal.cs",
               "RelativeToolTip": "Dal\\Api\\IDal.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:47:44.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T11:47:44.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "DalManager.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\DalManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\DalManager.cs",
               "RelativeDocumentMoniker": "Dal\\DalManager.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\DalManager.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\DalManager.cs",
               "RelativeToolTip": "Dal\\DalManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:43:30.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IBLUser.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBLUser.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IBLUser.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBLUser.cs",
-              "RelativeToolTip": "BL\\Api\\IBLUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:33:57.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IBLFullQueue.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBLFullQueue.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IBLFullQueue.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBLFullQueue.cs",
-              "RelativeToolTip": "BL\\Api\\IBLFullQueue.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:31:21.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IBL.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBL.cs",
-              "RelativeDocumentMoniker": "BL\\Api\\IBL.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Api\\IBL.cs",
-              "RelativeToolTip": "BL\\Api\\IBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:29:58.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BLManager.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\BLManager.cs",
-              "RelativeDocumentMoniker": "BL\\BLManager.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\BLManager.cs",
-              "RelativeToolTip": "BL\\BLManager.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:27:28.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T11:43:30.927Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "BLUserService.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLUserService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\BLUserService.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLUserService.cs",
-              "RelativeToolTip": "BL\\Services\\BLUserService.cs",
+              "Title": "IBLUser.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBLUser.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IBLUser.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBLUser.cs",
+              "RelativeToolTip": "BL\\Api\\IBLUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:27:27.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T11:33:57.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
+              "Title": "IBLFullQueue.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBLFullQueue.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IBLFullQueue.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBLFullQueue.cs",
+              "RelativeToolTip": "BL\\Api\\IBLFullQueue.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:31:21.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBL.cs",
+              "RelativeDocumentMoniker": "BL\\Api\\IBL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Api\\IBL.cs",
+              "RelativeToolTip": "BL\\Api\\IBL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:29:58.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BLManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\BLManager.cs",
+              "RelativeDocumentMoniker": "BL\\BLManager.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\BLManager.cs",
+              "RelativeToolTip": "BL\\BLManager.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:27:28.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BLUserService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLUserService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\BLUserService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLUserService.cs",
+              "RelativeToolTip": "BL\\Services\\BLUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T11:27:27.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FullQueueController.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Controllers\\FullQueueController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\FullQueueController.cs",
               "RelativeDocumentMoniker": "Server\\Controllers\\FullQueueController.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Server\\Controllers\\FullQueueController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\Controllers\\FullQueueController.cs",
               "RelativeToolTip": "Server\\Controllers\\FullQueueController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAwBoAAAAQAAAA",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T11:10:51.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "IFreeQueue.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\IFreeQueue.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\IFreeQueue.cs",
               "RelativeDocumentMoniker": "Dal\\Api\\IFreeQueue.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Api\\IFreeQueue.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Api\\IFreeQueue.cs",
               "RelativeToolTip": "Dal\\Api\\IFreeQueue.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T10:51:45.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T10:51:45.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 2,
               "Title": "BLFreeQueueService.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLFreeQueueService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFreeQueueService.cs",
               "RelativeDocumentMoniker": "BL\\Services\\BLFreeQueueService.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\BL\\Services\\BLFreeQueueService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFreeQueueService.cs",
               "RelativeToolTip": "BL\\Services\\BLFreeQueueService.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAcwA4AAAAOAAAA",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAkwEAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T10:51:09.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 5,
               "Title": "FreeQueueService.cs",
-              "DocumentMoniker": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Services\\FreeQueueService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Services\\FreeQueueService.cs",
               "RelativeDocumentMoniker": "Dal\\Services\\FreeQueueService.cs",
-              "ToolTip": "H:\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\Backend\\Dal\\Services\\FreeQueueService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Dal\\Services\\FreeQueueService.cs",
               "RelativeToolTip": "Dal\\Services\\FreeQueueService.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAcwC0AAAAkAAAA",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T10:46:24.928Z",
               "EditorCaption": ""

@@ -13,7 +13,9 @@ namespace BL.Api
        
       public List<FreeQueueForClient> GetFreeQueuesForClient();
       public List<FreeQueueForWorker> GetFreeQueuesForWorker(int workerID);
-      public FreeQueueForClient GetFreeQueueByDateForClient(DateOnly dateOnly, TimeOnly timeOnly);
+        public List<FreeQueueForClient> GetFreeQueueByDayForClient(DateOnly dateOnly);
+        public List<FreeQueueForWorker> GetFreeQueueByDayForWorker(DateOnly dateOnly);
+        public FreeQueueForClient GetFreeQueueByDateForClient(DateOnly dateOnly, TimeOnly timeOnly);
       public FreeQueueForWorker GetFreeQueueByDateForWorker(DateOnly dateOnly, TimeOnly timeOnly);
       public void Add(FreeQueueForWorker freeQueue);
       public void Delete(DateOnly dateOnly,TimeOnly timeOnly);

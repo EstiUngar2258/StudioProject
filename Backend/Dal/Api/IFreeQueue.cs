@@ -11,6 +11,7 @@ namespace Dal.Api
     {
 
         public FreeQueue GetQueueByDate(DateOnly dateOnly,TimeOnly timeOnly);
+        public List<FreeQueue> GetQueueByDate(DateOnly dateOnly);
 
 
     }

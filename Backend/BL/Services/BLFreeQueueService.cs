@@ -10,34 +10,17 @@ using System.Threading.Tasks;
 
 namespace BL.Services
 {
+
     public class BLFreeQueueService : IBLFreeQueue
     {
         private readonly IFreeQueue _freeQueue;
+      
         public BLFreeQueueService(IDal dal)
         {
             _freeQueue = dal.FreeQueue;
 
         }
-
-        public void Add(FreeQueueForWorker freeQueue)
-        {
-            ValidateFreeQueueForWorker(freeQueue);
-            FreeQueue toAdd = new()
-            {
-                Id = freeQueue.Id,
-                DateTime = freeQueue.DateTime,
-                Hour = freeQueue.Hour,
-                WorkerId = freeQueue.WorkerId,
-
-            };
-            //הימור לfreeQueue
-            _freeQueue.Add(toAdd);
-
-            // אם כל הבדיקות עברו, ניתן להוסיף את ה-freeQueue
-            // הוספת הלוגיקה להוספה כאן
-        }
-
-        private void ValidateFreeQueueForWorker(FreeQueueForWorker freeQueue)
+ private void ValidateFreeQueueForWorker(FreeQueueForWorker freeQueue)
         {
             if (freeQueue == null)
             {
@@ -59,6 +42,26 @@ namespace BL.Services
                 throw new ArgumentException("Hour must be a valid time.", nameof(freeQueue.Hour));
             }
         }
+        public void Add(FreeQueueForWorker freeQueue)
+        {
+            ValidateFreeQueueForWorker(freeQueue);
+            
+            FreeQueue toAdd = new()
+            {
+                Id = freeQueue.Id,
+                DateTime = freeQueue.DateTime,
+                Hour = freeQueue.Hour,
+                WorkerId = freeQueue.WorkerId,
+
+            };
+            //הימור לfreeQueue
+            _freeQueue.Add(toAdd);
+
+            // אם כל הבדיקות עברו, ניתן להוסיף את ה-freeQueue
+            // הוספת הלוגיקה להוספה כאן
+        }
+
+       
 
         public void Clear()
         {
@@ -97,7 +100,8 @@ namespace BL.Services
                 FreeQueue c = _freeQueue.GetQueueByDate(dateOnly, timeOnly);
                 FreeQueueForWorker freeQueueForWorker = new()
                 {
-                    Id = c.Id,
+                    Id= c.Id,
+                   
                     DateTime = c.DateTime,
                     Hour = c.Hour,
                     WorkerId = c.WorkerId,
@@ -139,7 +143,7 @@ namespace BL.Services
                 {
                     DateTime = freeQueu.DateTime,
                     Hour = freeQueu.Hour,
-                    Id = freeQueu.Id,
+                    Id= freeQueu.Id,
                     WorkerId = workerID
 
                 }));
@@ -200,5 +204,54 @@ namespace BL.Services
 
         }
 
+        public List<FreeQueueForClient> GetFreeQueueByDayForClient(DateOnly dateOnly)
+        {
+            try
+            {
+                List<FreeQueue> list =
+                _freeQueue.GetQueueByDate(dateOnly);
+                List<FreeQueueForClient> queueForClient = new();
+                list.ForEach(freeQueu => queueForClient.Add(new FreeQueueForClient()
+                {
+                    DateTime = freeQueu.DateTime,
+                    Hour = freeQueu.Hour,
+                    Id = freeQueu.Id
+
+                }));
+                return queueForClient;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueuesForClient failed: {ex.Message}", ex);
+
+            }
+        }
+
+        public List<FreeQueueForWorker> GetFreeQueueByDayForWorker(DateOnly dateOnly)
+        {
+            try
+            {
+                List<FreeQueue> list =
+                _freeQueue.GetQueueByDate(dateOnly);
+                List<FreeQueueForWorker> queueForWorker = new();
+                list.ForEach(freeQueu => queueForWorker.Add(new FreeQueueForWorker()
+                {
+                    DateTime = freeQueu.DateTime,
+                    Hour = freeQueu.Hour,
+                    Id = freeQueu.Id
+
+                }));
+                return queueForWorker;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueuesForClient failed: {ex.Message}", ex);
+
+            }
+        }
     }
     }

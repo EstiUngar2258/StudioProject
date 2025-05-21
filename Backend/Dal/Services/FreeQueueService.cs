@@ -80,5 +80,11 @@ namespace Dal.Services
             return existingEntity;
         }
 
+        public List< FreeQueue> GetQueueByDate(DateOnly dateOnly)
+        {
+            var existingEntity = _databaseManager.FreeQueues.Where(e => e.DateTime == dateOnly ).ToList()
+                ?? throw new KeyNotFoundException($"FreeQueue with DateTime {dateOnly}  not found.");
+            return existingEntity;
+        }
     }
 }

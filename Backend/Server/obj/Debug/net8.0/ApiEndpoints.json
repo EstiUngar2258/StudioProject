@@ -119,21 +119,90 @@
   },
   {
     "ContainingType": "Server.Controllers.FreeQueueController",
-    "Method": "GetFreeQueueForClient",
+    "Method": "Delete",
     "RelativePath": "api/FreeQueue",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Server.Controllers.FreeQueueController\u002BQueueRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.FreeQueueController",
+    "Method": "Update",
+    "RelativePath": "api/FreeQueue",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "freeQueue",
+        "Type": "BL.Models.FreeQueueForWorker",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BL.Models.FreeQueueForWorker",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.FreeQueueController",
+    "Method": "Add",
+    "RelativePath": "api/FreeQueue/Add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dateOnly",
-        "Type": "System.DateOnly",
+        "Name": "freeQueue",
+        "Type": "BL.Models.FreeQueueForWorker",
         "IsRequired": true
-      },
+      }
+    ],
+    "ReturnTypes": [
       {
-        "Name": "timeOnly",
-        "Type": "System.TimeOnly",
-        "IsRequired": false
+        "Type": "BL.Models.FreeQueueForWorker",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.FreeQueueController",
+    "Method": "GetFreeQueueByDateForClient",
+    "RelativePath": "api/FreeQueue/forClient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Server.Controllers.FreeQueueController\u002BQueueRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -150,21 +219,73 @@
   },
   {
     "ContainingType": "Server.Controllers.FreeQueueController",
-    "Method": "Add",
-    "RelativePath": "api/FreeQueue",
+    "Method": "GetFreeQueueByDayForClient",
+    "RelativePath": "api/FreeQueue/forClientDay",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "freeQueue",
-        "Type": "BL.Models.FreeQueueForWorker",
+        "Name": "dateOnly",
+        "Type": "Server.Controllers.FreeQueueController\u002BQueue",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BL.Models.FreeQueueForClient, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.FreeQueueController",
+    "Method": "GetFreeQueueByDateForWorker",
+    "RelativePath": "api/FreeQueue/forWorker",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Server.Controllers.FreeQueueController\u002BQueueRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
         "Type": "BL.Models.FreeQueueForWorker",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.FreeQueueController",
+    "Method": "GetFreeQueueByDayForWorker",
+    "RelativePath": "api/FreeQueue/forWorkerDay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dateOnly",
+        "Type": "Server.Controllers.FreeQueueController\u002BQueue",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[BL.Models.FreeQueueForWorker, BL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

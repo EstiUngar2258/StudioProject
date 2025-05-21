@@ -3064,23 +3064,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\מאירוביץ שרה\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\רבינוביץ רות שירה\\.nuget\\packages\\": {},
+>>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "H:\\פרויקט גמר\\StudioProject\\Backend\\Server\\Server.csproj",
       "projectName": "Server",
       "projectPath": "H:\\פרויקט גמר\\StudioProject\\Backend\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\מאירוביץ שרה\\.nuget\\packages\\",
       "outputPath": "H:\\פרויקט גמר\\StudioProject\\Backend\\Server\\obj\\",
+=======
+      "projectUniqueName": "H:\\ProjectC#\\StudioProject\\Backend\\Server\\Server.csproj",
+      "projectName": "Server",
+      "projectPath": "H:\\ProjectC#\\StudioProject\\Backend\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\רבינוביץ רות שירה\\.nuget\\packages\\",
+      "outputPath": "H:\\ProjectC#\\StudioProject\\Backend\\Server\\obj\\",
+>>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\מאירוביץ שרה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\רבינוביץ רות שירה\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3096,8 +3112,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "H:\\פרויקט גמר\\StudioProject\\Backend\\BL\\BL.csproj": {
               "projectPath": "H:\\פרויקט גמר\\StudioProject\\Backend\\BL\\BL.csproj"
+=======
+            "H:\\ProjectC#\\StudioProject\\Backend\\BL\\BL.csproj": {
+              "projectPath": "H:\\ProjectC#\\StudioProject\\Backend\\BL\\BL.csproj"
+>>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
             }
           }
         }

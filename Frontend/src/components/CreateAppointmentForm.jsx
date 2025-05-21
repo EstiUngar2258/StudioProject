@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addAppointment } from '../redux/appointmentsSlice';
 import { startOfToday, addMonths } from 'date-fns';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import AvailableAppointmentsList from './AvailableAppointmentsList';
 
 const CreateAppointmentForm = () => {
     const [appointmentData, setAppointmentData] = useState({
-        clientId: '',
+        clientId: '', // שדה תעודת זהות
         serviceId: '',
         workerId: '',
         date: '',
@@ -56,12 +55,13 @@ const CreateAppointmentForm = () => {
                                 צור תור חדש
                             </h2>
                             <form onSubmit={handleSubmit}>
+                                {/* שדה תעודת זהות */}
                                 <div className="mb-3">
-                                    <label className="form-label fw-bold" htmlFor="clientId" style={{ color: "#6a3093" }}>מספר לקוח</label>
+                                    <label className="form-label fw-bold" htmlFor="clientId" style={{ color: "#6a3093" }}>תעודת זהות</label>
                                     <div className="input-group">
                                         <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-person" style={{ color: "#6a3093" }}></i></span>
                                         <input
-                                            type="number"
+                                            type="text"
                                             id="clientId"
                                             name="clientId"
                                             className="form-control"
@@ -72,38 +72,8 @@ const CreateAppointmentForm = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="mb-3">
-                                    <label className="form-label fw-bold" htmlFor="serviceId" style={{ color: "#6a3093" }}>מספר שירות</label>
-                                    <div className="input-group">
-                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-music-note-beamed" style={{ color: "#6a3093" }}></i></span>
-                                        <input
-                                            type="number"
-                                            id="serviceId"
-                                            name="serviceId"
-                                            className="form-control"
-                                            value={appointmentData.serviceId}
-                                            onChange={handleChange}
-                                            required
-                                            style={{ background: "#f8fafc" }}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="mb-3">
-                                    <label className="form-label fw-bold" htmlFor="workerId" style={{ color: "#6a3093" }}>מספר עובד</label>
-                                    <div className="input-group">
-                                        <span className="input-group-text" style={{ background: "#e0c3fc" }}><i className="bi bi-people" style={{ color: "#6a3093" }}></i></span>
-                                        <input
-                                            type="number"
-                                            id="workerId"
-                                            name="workerId"
-                                            className="form-control"
-                                            value={appointmentData.workerId}
-                                            onChange={handleChange}
-                                            required
-                                            style={{ background: "#f8fafc" }}
-                                        />
-                                    </div>
-                                </div>
+
+                                {/* שדה תאריך */}
                                 <div className="mb-3">
                                     <label className="form-label fw-bold" htmlFor="date" style={{ color: "#6a3093" }}>תאריך</label>
                                     <div className="input-group">
@@ -122,6 +92,11 @@ const CreateAppointmentForm = () => {
                                         />
                                     </div>
                                 </div>
+
+                                {/* רשימת תורים פנויים */}
+                                <AvailableAppointmentsList date={appointmentData.date} />
+
+                                {/* שדה שעה */}
                                 <div className="mb-4">
                                     <label className="form-label fw-bold" htmlFor="time" style={{ color: "#6a3093" }}>שעה</label>
                                     <div className="input-group">
@@ -138,6 +113,7 @@ const CreateAppointmentForm = () => {
                                         />
                                     </div>
                                 </div>
+
                                 <button type="submit"
                                     className="btn w-100 py-2 fw-bold rounded-pill shadow"
                                     style={{

@@ -1,11 +1,13 @@
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginUserAsync } from '../redux/thunk';
+import { login } from '../redux/authSlice';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { loginUser } from '../api'; // ייבוא הפונקציה מקובץ api
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const Login = () => {
+    const [credentials, setCredentials] = useState({ username: '', idNumber: '' }); // עדכון state
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { loading, error, user } = useSelector((state) => state.user);
@@ -16,34 +18,20 @@ const Login = () => {
         }
     }, [user, error, navigate]);
 
-    const handleLogin = async (e) => {
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setCredentials({ ...credentials, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const formData = new FormData(e.target);
-        const idNumber = formData.get('idNumber').trim();
-        const name = formData.get('name').trim();
-
-        if (idNumber.length !== 9) {
-            alert('מספר הזהות חייב להיות באורך 9 תווים.');
-            return;
-        }
-        if (!name) {
-            alert('יש להזין שם.');
-            return;
-        }
-
-        const credentials = { idNumber, name };
-
         try {
-            const resultAction = await dispatch(loginUserAsync(credentials));
-            if (loginUserAsync.fulfilled.match(resultAction)) {
-                navigate('/dashboard');
-            } else {
-                alert(resultAction.payload.message || 'אירעה שגיאה, נסה שוב.');
-            }
-        } catch (err) {
-            console.error('Login error:', err);
-            alert('אירעה שגיאה, נסה שוב.');
+            const userData = await loginUser(credentials); // קריאה לפונקציה בקובץ api
+            dispatch(login(userData)); // עדכון Redux עם פרטי המשתמש
+            navigate('/'); // הפניה לעמוד הבית
+        } catch (error) {
+            console.error('Error during login:', error);
+            alert('שם משתמש או תעודת זהות שגויים');
         }
     };
 
@@ -63,36 +51,44 @@ const Login = () => {
                                 <i className="bi bi-person-circle me-2" style={{ color: "#2a2a72" }}></i>
                                 כניסה למערכת
                             </h2>
-                            <form onSubmit={handleLogin}>
+                            <form onSubmit={handleSubmit}>
+                                {/* שדה שם משתמש */}
                                 <div className="mb-3">
-                                    <label htmlFor="idNumber" className="form-label fw-bold">מספר זהות</label>
+                                    <label htmlFor="username" className="form-label fw-bold">שם משתמש</label>
                                     <div className="input-group">
-                                        <span className="input-group-text"><i className="bi bi-credit-card-2-front"></i></span>
+                                        <span className="input-group-text"><i className="bi bi-person"></i></span>
                                         <input
                                             type="text"
-                                            name="idNumber"
+                                            name="username"
                                             className="form-control"
-                                            id="idNumber"
-                                            placeholder="מספר זהות"
+                                            id="username"
+                                            placeholder="שם משתמש"
+                                            value={credentials.username}
+                                            onChange={handleChange}
                                             required
                                             autoFocus
                                         />
                                     </div>
                                 </div>
+
+                                {/* שדה תעודת זהות */}
                                 <div className="mb-4">
-                                    <label htmlFor="name" className="form-label fw-bold">שם</label>
+                                    <label htmlFor="idNumber" className="form-label fw-bold">תעודת זהות</label>
                                     <div className="input-group">
-                                        <span className="input-group-text"><i className="bi bi-person"></i></span>
+                                        <span className="input-group-text"><i className="bi bi-card-text"></i></span>
                                         <input
                                             type="text"
-                                            name="name"
+                                            name="idNumber"
                                             className="form-control"
-                                            id="name"
-                                            placeholder="שם"
+                                            id="idNumber"
+                                            placeholder="תעודת זהות"
+                                            value={credentials.idNumber}
+                                            onChange={handleChange}
                                             required
                                         />
                                     </div>
                                 </div>
+
                                 <button type="submit" className="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow" disabled={loading}>
                                     <i className="bi bi-box-arrow-in-right me-2"></i>
                                     {loading ? 'טוען...' : 'כניסה'}

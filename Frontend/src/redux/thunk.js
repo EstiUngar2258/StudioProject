@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'; // ודא שה-import של axios קיים
-import { addClient, fetchData, loginUser } from "../api";
+import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate } from "../api";
 
 import { loginFailure } from "./userSlice";
 
@@ -144,11 +144,8 @@ export const fetchAvailableAppointmentsByDateAsync = createAsyncThunk(
     'appointments/fetchAvailableByDate',
     async ({ dateOnly, timeOnly }, { rejectWithValue }) => {
         try {
-            const response = await apiClient.post(
-                '/Appointments/available',
-                { dateOnly, timeOnly }
-            );
-            return response.data;
+            const data = await fetchAvailableAppointmentsByDate({ dateOnly, timeOnly }); // קריאה לפונקציה ב-api
+            return data;
         } catch (error) {
             console.error('Error fetching available appointments:', error);
             return rejectWithValue(handleErrorResponse(error));

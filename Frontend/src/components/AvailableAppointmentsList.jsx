@@ -1,24 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAvailableAppointmentsByDateAsync } from "../redux/thunk";
 
-const AvailableAppointmentsList = () => {
-    const [date, setDate] = useState("");
+const AvailableAppointmentsList = ({ date }) => {
     const dispatch = useDispatch();
     const { appointments, loading, error } = useSelector(state => state.appointments.availableByDate || {});
 
-    const handleDateChange = (e) => {
-        setDate(e.target.value);
-        if (e.target.value) {
-            dispatch(fetchAvailableAppointmentsByDateAsync(e.target.value));
+    // שליחת בקשה לשרת כאשר התאריך משתנה
+    useEffect(() => {
+        if (date) { // שלח בקשה רק אם התאריך מוגדר
+            dispatch(fetchAvailableAppointmentsByDateAsync(date));
         }
-    };
+    }, [date, dispatch]);
+
+    // אם התאריך לא מוגדר, אל תציג דבר
+    if (!date) {
+        return null;
+    }
 
     return (
         <div>
-            <input type="date" value={date} onChange={handleDateChange} />
-            {loading && <div>טוען...</div>}
+            {loading && <div>טוען תורים פנויים...</div>}
             {error && <div>שגיאה: {error.message}</div>}
+            {!loading && !error && appointments && appointments.length === 0 && (
+                <div>אין תורים פנויים בתאריך זה.</div>
+            )}
             <ul>
                 {appointments && appointments.map(app => (
                     <li key={app.id}>{app.time}</li>

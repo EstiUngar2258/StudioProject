@@ -26,3 +26,14 @@ export const addAppointment = async (appointmentData) => {
     const response = await axios.post('http://localhost:5235/api/FullQueue', appointmentData);
     return response.data; // מחזיר את הנתונים של התור שנוסף
 };
+
+
+// פונקציה לשליפת תורים פנויים לפי תאריך
+export const fetchAvailableAppointmentsByDate = async ({ dateOnly, timeOnly }) => {
+    const response = await axios.post('http://localhost:5235/api/FreeQueue', {
+        dateOnly,
+        timeOnly,
+    });
+    return response.data;
+};
+

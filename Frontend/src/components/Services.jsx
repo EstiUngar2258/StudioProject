@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // הוסף אייקונים של Bootstrap
-import '../App.css'; // ודא שיש לך קובץ כזה, או שנה לנתיב ה-CSS שלך
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import '../App.css';
 
 const serviceList = [
     {
@@ -26,6 +27,18 @@ const serviceList = [
 ];
 
 const Services = () => {
+    const navigate = useNavigate();
+    const isLoggedIn = useSelector((state) => state.auth.isLoggedIn); // בדיקת סטטוס ההתחברות
+
+    const handleAddAppointment = (serviceTitle) => {
+        if (!isLoggedIn) {
+            alert("עליך להירשם כלקוח במערכת לפני הוספת תור.");
+            navigate('/Login'); // הפניה לעמוד ההרשמה
+        } else {
+            navigate(`/newAppointment?service=${encodeURIComponent(serviceTitle)}`);
+        }
+    };
+
     return (
         <div className="container py-5" style={{ background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)" }}>
             <h1
@@ -68,8 +81,8 @@ const Services = () => {
                                     </h5>
                                     <p className="card-text" style={{ color: "#555" }}>{service.desc}</p>
                                 </div>
-                                <Link
-                                    to={`/newAppointment?service=${encodeURIComponent(service.title)}`}
+                                <button
+                                    onClick={() => handleAddAppointment(service.title)}
                                     className="btn mt-3"
                                     style={{
                                         background: `linear-gradient(90deg, ${service.color} 0%, #43cea2 100%)`,
@@ -82,7 +95,7 @@ const Services = () => {
                                 >
                                     <i className="bi bi-plus-circle me-2"></i>
                                     הוסף תור
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -93,3 +106,4 @@ const Services = () => {
 };
 
 export default Services;
+

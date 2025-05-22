@@ -10,9 +10,10 @@ namespace BL.Api
 {
     public interface IBLFullQueue
     {
-        public void Add(FreeQueue freeQueue,  int clientId, int serviceId, string status);
-        public void Remove(FullQueue fullQueue);
-        public void Update(FullQueue entity);
+        public void Add(FullQueueForClient fullQueue);
+        public void Remove(FullQueueForClient fullQueueForClient);
+        public void Update(FullQueueForClient entity);
         public IEnumerable<FullQueueForClient> GetAllForManager();
+        public IEnumerable<FullQueueForClient> GetByDate(DateOnly date);
     }
 }

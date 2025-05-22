@@ -53,11 +53,33 @@ namespace BL.Services
             return true;
         }
 
-        public void Add(Client client)
+        public void Add(ClientForManager client)
         {
-            if (ClientOK(client))
+            
+                try
+                {
+                    
+                    Client clientForManager = new ()
+                    {
+                        Id = client.Id,
+                        FirstName = client.FirstName,
+                        LastName = client.LastName,
+                        Phone = client.Phone,
+                        Age = client.Age,
+                        Email = client.Email,
+                    };
+                   _client.Add(clientForManager);
+                }
+                catch (KeyNotFoundException ex)
+                {
+                    // טיפול בשגיאה במקרה שהישות לא נמצאה
+                    Console.WriteLine(ex.Message);
+                    // אפשר להחזיר null, לזרוק שגיאה חדשה, או כל טיפול אחר שאתה רוצה לבצע
+                    // או לזרוק שגיאה חדשה
+                }
 
-                _client.Add(client);
+
+          
         }
 
         public IEnumerable<ClientForManager> GetAllForManager()
@@ -97,13 +119,22 @@ namespace BL.Services
             }
 
         }
-        public void Update(Client entity)
+        public void Update(ClientForManager entity)
         {
 
             
                 try
                 {
-                    _client.Update(entity);
+                Client clientForManager = new ()
+                {
+                    Id = entity.Id,
+                    FirstName = entity.FirstName,
+                    LastName = entity.LastName,
+                    Phone = entity.Phone,
+                    Age = entity.Age,
+                    Email = entity.Email,
+                };
+                _client.Update(clientForManager);
                 }
                 catch (KeyNotFoundException ex)
                 {

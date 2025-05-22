@@ -60,28 +60,17 @@ export const addClientAsync = createAsyncThunk(
 // Thunk ללוגאין
 export const loginUserAsync = createAsyncThunk(
     'user/login',
-    async (credentials, { rejectWithValue ,getState,dispatch}) => {
-        const state = getState(); // גישה למצב הנוכחי של Redux
-        
+    async (credentials, { rejectWithValue, dispatch }) => {
         try {
-            const response = await axios.post('http://localhost:5235/api/User/Login', credentials, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            console.log(response)
-
-            return response.data; // מחזיר את תגובת השרת
+            const response = await loginUser(credentials); // שימוש בפונקציה מ-api.js
+            return response; // מחזיר את תגובת השרת
         } catch (error) {
-            dispatch(loginFailure({
+            const handledError = {
                 message: error.response?.data?.message || 'Login failed',
                 status: error.response?.status,
-            }));
-            return rejectWithValue({
-
-                message: error.response?.data?.message || 'Login failed',
-                status: error.response?.status,
-            });
+            };
+            dispatch(loginFailure(handledError)); // עדכון Redux במקרה של כישלון
+            return rejectWithValue(handledError);
         }
     }
 );

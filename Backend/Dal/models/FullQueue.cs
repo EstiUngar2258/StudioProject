@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dal.models;
 
 public partial class FullQueue
 {
+    
     public int Id { get; set; }
 
     public int WorkerId { get; set; }

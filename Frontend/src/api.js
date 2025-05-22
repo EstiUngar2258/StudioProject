@@ -13,8 +13,16 @@ export const addClient = async (clientData) => {
 };
 
 export const loginUser = async (credentials) => {
-    const response = await axios.post('http://localhost:5235/api/User/Login', credentials);
-    return response.data; // מחזיר את הנתונים של המשתמש שנכנס
+    console.log('Sending to API:', credentials); // בדיקה של הנתונים שנשלחים לשרת
+    const response = await axios.post('http://localhost:5235/api/User/Login', {
+        IdNumber: credentials.idNumber, // ודא שהשדה תואם את מה שהשרת מצפה לו
+        Name: credentials.username,    // ודא שהשדה תואם את מה שהשרת מצפה לו
+    }, {
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    return response.data;
 };
 
 export const fetchAppointments = async () => {

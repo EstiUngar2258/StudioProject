@@ -6,6 +6,7 @@ using Dal.models;
 using Dal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
 
 public class Startup
 {
@@ -15,6 +16,9 @@ public class Startup
     {
         _configuration = configuration;
     }
+
+
+
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -37,6 +41,11 @@ public class Startup
                                   .AllowAnyMethod()
                                   .AllowAnyHeader());
         });
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+        });
+
     }
 
 
@@ -50,5 +59,12 @@ public class Startup
         {
             endpoints.MapControllers(); // הוספת נקודות קצה
         });
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
+        {
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        });
+
     }
+
 }

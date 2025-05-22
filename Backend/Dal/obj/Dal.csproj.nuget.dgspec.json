@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "H:\\פרויקט גמר\\StudioProject\\Backend\\Dal\\Dal.csproj": {}
   },
   "projects": {
@@ -13,29 +12,12 @@
         "projectPath": "H:\\פרויקט גמר\\StudioProject\\Backend\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\מאירוביץ שרה\\.nuget\\packages\\",
         "outputPath": "H:\\פרויקט גמר\\StudioProject\\Backend\\Dal\\obj\\",
-=======
-    "H:\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj": {}
-  },
-  "projects": {
-    "H:\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "H:\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj",
-        "projectName": "Dal",
-        "projectPath": "H:\\ProjectC#\\StudioProject\\Backend\\Dal\\Dal.csproj",
-        "packagesPath": "C:\\Users\\רבינוביץ רות שירה\\.nuget\\packages\\",
-        "outputPath": "H:\\ProjectC#\\StudioProject\\Backend\\Dal\\obj\\",
->>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
           "C:\\Users\\מאירוביץ שרה\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\רבינוביץ רות שירה\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4ddc6df4bcf0603c16b233818629af831838514e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -81,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.1, )"
             }
           },
           "imports": [
@@ -99,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

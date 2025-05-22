@@ -25,13 +25,14 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Sending credentials:', credentials); // בדיקה של הנתונים שנשלחים
         try {
-            const userData = await loginUser(credentials); // קריאה לפונקציה בקובץ api
-            dispatch(login(userData)); // עדכון Redux עם פרטי המשתמש
-            navigate('/'); // הפניה לעמוד הבית
+            const userData = await loginUser(credentials);
+            dispatch(login(userData));
+            navigate('/');
         } catch (error) {
-            console.error('Error during login:', error);
-            alert('שם משתמש או תעודת זהות שגויים');
+            console.error('Error during login:', error.response?.data || error.message);
+            alert(error.response?.data?.message || 'שם משתמש או תעודת זהות שגויים');
         }
     };
 

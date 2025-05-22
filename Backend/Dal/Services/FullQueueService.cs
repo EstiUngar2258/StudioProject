@@ -68,6 +68,14 @@ namespace Dal.Services
 
             _databaseManager.SaveChanges();
         }
+
+        public IEnumerable<FullQueue> GetByDate(DateOnly date)
+        {
+            if (date == default) throw new ArgumentException("Date must be a valid date.", nameof(date));
+
+            return _databaseManager.FullQueues
+                .Where(fullQueue => fullQueue.DateTime == date)
+                .ToList();
+        }
     }
 }
-

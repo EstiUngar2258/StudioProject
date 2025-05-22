@@ -28,54 +28,55 @@ namespace Server.Controllers
                 return Ok(items);
             }
 
-        //[HttpGet("{id}")]
-        //public ActionResult<> GetById(int id)
+
+        [HttpPost]
+        public ActionResult<FullQueueForClient> Add([FromBody] FullQueueForClient fullQueue)
+        {
+            if (fullQueue == null)
+            {
+                return BadRequest("Queue item cannot be null");
+            }
+
+            fullQueueService.Add(fullQueue);
+            return fullQueue;
+        }
+
+
+        [HttpGet("date/{date}")]
+        public ActionResult<List<FullQueueForClient>> GetByDate(DateOnly date)
+        {
+            var items = fullQueueService.GetByDate(date);
+            return Ok(items);
+        }
+
+
+        [HttpPut]
+        public ActionResult<FullQueueForClient> Update([FromBody] FullQueueForClient fullQueue)
+        {
+            if (fullQueue == null)
+            {
+                return BadRequest("Queue item cannot be null");
+            }
+
+            fullQueueService.Update(fullQueue);
+            return NoContent(); // או תוכל להחזיר את ה-fullQueue המעודכן
+        }
+
+        //[HttpDelete("{id}")]
+        //public ActionResult Remove(int id)
         //{
-        //    var item = queueService.GetItemById(id);
-        //    if (item == null)
+        //    var fullQueue = fullQueueService.GetAllForManager().FirstOrDefault(q => q.id == id); // הנחה שיש שדה Id
+        //    if (fullQueue == null)
         //    {
-        //        return NotFound();
+        //        return NotFound("Queue item not found");
         //    }
-        //    return Ok(item);
+
+        //    fullQueueService.Remove(fullQueue);
+        //    return NoContent();
         //}
 
-        //[HttpPost]
-        //public ActionResult<FullQueue> Add([FromBody] FullQueue item)
-        //{
-        //    if (item == null)
-        //    {
-        //        return BadRequest("Queue item cannot be null");
-        //    }
 
-        //fullQueueService.Add(FreeQueue freeQueue, int workerId, int clientId, int serviceId, string status);
-        //    return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
-        //}
 
-        //    [HttpPut("{id}")]
-        //    public ActionResult Update(int id, [FromBody] QueueItem item)
-        //    {
-        //        if (item == null || item.Id != id)
-        //        {
-        //            return BadRequest("Queue item cannot be null and ID must match");
-        //        }
-
-        //        queueService.UpdateItem(item);
-        //        return NoContent();
-        //    }
-
-        //    [HttpDelete("{id}")]
-        //    public ActionResult Delete(int id)
-        //    {
-        //        var item = queueService.GetItemById(id);
-        //        if (item == null)
-        //        {
-        //            return NotFound();
-        //        }
-
-        //        queueService.RemoveItem(id);
-        //        return NoContent();
-        //    }
-        //}
     }
 
 }

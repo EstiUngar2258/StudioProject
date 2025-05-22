@@ -32,7 +32,7 @@ namespace StudioServer.Controllers
             return Ok(Client);
         }
         [HttpPost]
-        public ActionResult<Client> Add([FromBody] Client client)
+        public ActionResult<ClientForManager> Add([FromBody] ClientForManager client)
         {
             if (client == null)
             {
@@ -44,7 +44,7 @@ namespace StudioServer.Controllers
         }
 
         [HttpPut]
-        public ActionResult<Client> Update([FromBody] Client client)
+        public ActionResult<ClientForManager> Update([FromBody] ClientForManager client)
         {
             if (client == null)
             {

@@ -14,6 +14,6 @@ namespace BL.Models
         public TimeOnly Hour { get; set; }
         public int ClientId { get; set; }
         public int ServiceId { get; set; }
-        public string Status { get; set; } = string.Empty; // ניתן לשנות ל-null אם מתאים
+        public string Status { get; set; } = "invalid";
     }
 }

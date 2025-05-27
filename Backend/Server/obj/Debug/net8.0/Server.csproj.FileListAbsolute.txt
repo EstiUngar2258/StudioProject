@@ -612,3 +612,8 @@ H:\פרויקט גמר\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle
 H:\פרויקט גמר\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 H:\פרויקט גמר\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 H:\פרויקט גמר\StudioProject\Backend\Server\obj\Debug\net8.0\Server.MvcApplicationPartsAssemblyInfo.cs
+H:\ProjectC#\StudioProject\Backend\Server\bin\Debug\net8.0\Microsoft.OpenApi.dll
+H:\ProjectC#\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+H:\ProjectC#\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+H:\ProjectC#\StudioProject\Backend\Server\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+H:\ProjectC#\StudioProject\Backend\Server\obj\Debug\net8.0\Server.MvcApplicationPartsAssemblyInfo.cs

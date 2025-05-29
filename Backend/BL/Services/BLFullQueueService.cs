@@ -54,15 +54,16 @@ namespace BL.Services
 
 
             };
-           
             _fullqueue.Add(fullQueue1);
-            _bLFreeQueue.Delete(fullQueue1.DateTime,fullQueue1.Hour);
+            _bLFreeQueue.Delete(fullQueue1.DateTime, fullQueue1.Hour);
 
 
 
 
         }
 
+
+        
         public IEnumerable<FullQueueForClient> GetAllForManager()
         {
             List<FullQueueForClient> fullQueueList = new List<FullQueueForClient>();
@@ -73,29 +74,194 @@ namespace BL.Services
         }
 
 
-      
-        //public void Remove(FullQueueForClient fullQueueForClient)
-        //{
-        //    FullQueue f = _fullqueue.GetQueueByDate(dateOnly, timeOnly);
-        //    try
-        //    {
 
-        //        _freeQueue.Delete(f.Id);
 
-        //    }
-        //    catch (KeyNotFoundException ex)
-        //    {
-        //        // טיפול בשגיאה במקרה שהישות לא נמצאה
-        //        Console.WriteLine(ex.Message);
-        //        throw new InvalidOperationException($"Delete failed: {ex.Message}", ex);
-
-        //    }
-        //}
-
-        public void Update(FullQueueForClient entity)
+        public FullQueueForClient GetFullQueueByDateForClient(DateOnly dateOnly, TimeOnly timeOnly)
         {
-            throw new NotImplementedException();
+            try
+            {
+               FullQueue c = _fullqueue.GetQueueByDate(dateOnly, timeOnly);
+                FullQueueForClient fullQueueForClient = new()
+                {
+                    Id = c.Id,
+                    DateTime = c.DateTime,
+                    Hour = c.Hour,
+                };
+                return fullQueueForClient;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueueByDate failed: {ex.Message}", ex);
+
+            }
         }
+
+
+        public FullQueueForClient GetFullQueueByDateForWorker(DateOnly dateOnly, TimeOnly timeOnly)
+        {
+            try
+            {
+                FullQueue c = _fullqueue.GetQueueByDate(dateOnly, timeOnly);
+                FullQueueForClient fullQueueForWorker = new()
+                {
+
+                    Id = c.Id,
+                    DateTime = c.DateTime,
+                    Hour = c.Hour,
+                    WorkerId = c.WorkerId,
+
+                };
+                return fullQueueForWorker;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueueByDate failed: {ex.Message}", ex);
+
+            }
+        }
+
+
+        public List<FullQueueForClient> GetfullQueuesForClient()
+        {
+            List<FullQueueForClient> queueForClient = new();
+            _fullqueue.GetAll().ToList().ForEach(fullQueue => queueForClient.Add(new FullQueueForClient()
+            {
+                DateTime = fullQueue.DateTime,
+                Hour = fullQueue.Hour,
+                Id = fullQueue.Id,
+
+
+            }));
+            return queueForClient;
+        }
+
+        public List<FullQueueForClient> GetfullQueuesForWorker(int workerID)
+        {
+            try
+            {
+                List<FullQueue> list =
+                _fullqueue.GetAll().Where(fq => fq.WorkerId == workerID).ToList();
+                List<FullQueueForClient> queueForWorker = new();
+                list.ForEach(fullQueue => queueForWorker.Add(new FullQueueForClient()
+                {
+                    DateTime = fullQueue.DateTime,
+                    Hour = fullQueue.Hour,
+                    Id = fullQueue.Id,
+                    WorkerId = workerID
+
+                }));
+                return queueForWorker;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueuesForWorker failed: {ex.Message}", ex);
+
+            }
+        }
+
+        public void Delete(DateOnly dateOnly, TimeOnly timeOnly)
+        {
+            FullQueue f = _fullqueue.GetQueueByDate(dateOnly, timeOnly);
+            try
+            {
+
+                _fullqueue.Delete(f.Id);
+
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"Delete failed: {ex.Message}", ex);
+
+            }
+        }
+
+        public void Update(FullQueueForClient fullQueue)
+        {
+            ValidateFullQueue(fullQueue);
+            {
+                try
+                {
+                    FullQueue fullQueue1 = new FullQueue()
+                    {
+                        Id = fullQueue.Id,
+                        WorkerId = fullQueue.WorkerId,
+                        DateTime = fullQueue.DateTime,
+                        Hour = fullQueue.Hour,
+
+                    };
+                    _fullqueue.Update(fullQueue1);
+                }
+                catch (KeyNotFoundException ex)
+                {
+                    // טיפול בשגיאה במקרה שהישות לא נמצאה
+                    throw new InvalidOperationException($"Update failed: {ex.Message}", ex);
+                }
+
+
+            }
+
+        }
+
+
+        public List<FullQueueForClient> GetFullQueueByDayForClient(DateOnly dateOnly)
+        {
+            try
+            {
+                List<FullQueue> list =
+                _fullqueue.GetQueueByDate(dateOnly);
+                List<FullQueueForClient> queueForClient = new();
+                list.ForEach(fullQueu => queueForClient.Add(new FullQueueForClient()
+                {
+                    DateTime = fullQueu.DateTime,
+                    Hour = fullQueu.Hour,
+                    Id = fullQueu.Id
+
+                }));
+                return queueForClient;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueuesForClient failed: {ex.Message}", ex);
+
+            }
+        }
+
+        public List<FullQueueForClient> GetFullQueueByDayForWorker(DateOnly dateOnly)
+        {
+            try
+            {
+                List<FullQueue> list =
+                _fullqueue.GetQueueByDate(dateOnly);
+                List<FullQueueForClient> queueForWorker = new();
+                list.ForEach(fullQueue => queueForWorker.Add(new FullQueueForClient()
+                {
+                    DateTime = fullQueue.DateTime,
+                    Hour = fullQueue.Hour,
+                    Id = fullQueue.Id
+
+                }));
+                return queueForWorker;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // טיפול בשגיאה במקרה שהישות לא נמצאה
+                Console.WriteLine(ex.Message);
+                throw new InvalidOperationException($"GetFreeQueuesForClient failed: {ex.Message}", ex);
+
+            }
+        }
+
+      
 
 
 
@@ -121,10 +287,12 @@ namespace BL.Services
             return fullQueueList;
         }
 
+
         public void Remove(FullQueueForClient fullQueueForClient)
         {
             throw new NotImplementedException();
         }
+
     }
 }
 

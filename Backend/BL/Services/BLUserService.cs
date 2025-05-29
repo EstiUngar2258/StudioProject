@@ -21,6 +21,7 @@ public class BLUserService: IBLUser
         {
             return new User
             {
+                UserId = client.Id,
                 UserType = "Client",
                 UserName = client.FirstName,
                 Email = client.Email
@@ -33,6 +34,7 @@ public class BLUserService: IBLUser
         {
             return new User
             {
+                UserId = worker.Id,
                 UserType = "Worker",
                 UserName = worker.FirstName,
                 Email = worker.Email

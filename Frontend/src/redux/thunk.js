@@ -62,7 +62,9 @@ export const loginUserAsync = createAsyncThunk(
     'user/login',
     async (credentials, { rejectWithValue, dispatch }) => {
         try {
-            const response = await loginUser(credentials); // שימוש בפונקציה מ-api.js
+            const response = await loginUser(credentials);
+           
+            console.log('response.data', response.data); // שימוש בפונקציה מ-api.js
             return response; // מחזיר את תגובת השרת
         } catch (error) {
             const handledError = {

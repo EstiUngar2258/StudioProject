@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addAppointment } from '../redux/appointmentsSlice';
 import { startOfToday, addMonths } from 'date-fns';
 import AvailableAppointmentsList from './AvailableAppointmentsList';
 
 const CreateAppointmentForm = () => {
+const user= useSelector((state) => state.auth.user);
     const [appointmentData, setAppointmentData] = useState({
-        clientId: '', // שדה תעודת זהות
+        clientId: user? [user.userId]:'', // שדה תעודת זהות
         serviceId: '',
         workerId: '',
         date: '',

@@ -6,13 +6,13 @@ const initialState = {
 };
 
 const authSlice = createSlice({
-    name: 'auth',
-    initialState,
-    reducers: {
-        login: (state, action) => {
-            state.isLoggedIn = true;
-            state.user = action.payload; // שמירת פרטי המשתמש
-        },
+  name: 'auth',
+  initialState: { user: null, isLoggedIn: false },
+  reducers: {
+    login: (state, action) => {
+      state.user = action.payload;
+      state.isLoggedIn = true;
+    },
         logout: (state) => {
             state.isLoggedIn = false;
             state.user = null; // איפוס פרטי המשתמש

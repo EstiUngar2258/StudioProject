@@ -709,7 +709,10 @@
           "Swashbuckle.AspNetCore": "8.1.1"
         },
         "runtime": {
-          "BL.dll": {}
+          "BL.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Dal/1.0.0": {
@@ -719,7 +722,10 @@
           "Swashbuckle.AspNetCore": "8.1.1"
         },
         "runtime": {
-          "Dal.dll": {}
+          "Dal.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

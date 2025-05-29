@@ -10,5 +10,8 @@ namespace Dal.Api
     public interface IFullQueue:ICrud<FullQueue>
     {
 
+        public FullQueue GetQueueByDate(DateOnly dateOnly, TimeOnly timeOnly);
+        public List<FullQueue> GetQueueByDate(DateOnly dateOnly);
+
     }
 }

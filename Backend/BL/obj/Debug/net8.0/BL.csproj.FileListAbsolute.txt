@@ -1,33 +1,19 @@
-H:\ProjectC#\Studio\BL\bin\Debug\net8.0\BL.deps.json
-H:\ProjectC#\Studio\BL\bin\Debug\net8.0\BL.dll
-H:\ProjectC#\Studio\BL\bin\Debug\net8.0\BL.pdb
-H:\ProjectC#\Studio\BL\bin\Debug\net8.0\Dal.dll
-H:\ProjectC#\Studio\BL\bin\Debug\net8.0\Dal.pdb
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.dll
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\refint\BL.dll
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\BL.pdb
-H:\ProjectC#\Studio\BL\obj\Debug\net8.0\ref\BL.dll
-H:\C#project\Studio\BL\bin\Debug\net8.0\BL.deps.json
-H:\C#project\Studio\BL\bin\Debug\net8.0\BL.dll
-H:\C#project\Studio\BL\bin\Debug\net8.0\BL.pdb
-H:\C#project\Studio\BL\bin\Debug\net8.0\Dal.dll
-H:\C#project\Studio\BL\bin\Debug\net8.0\Dal.pdb
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.dll
-H:\C#project\Studio\BL\obj\Debug\net8.0\refint\BL.dll
-H:\C#project\Studio\BL\obj\Debug\net8.0\BL.pdb
-H:\C#project\Studio\BL\obj\Debug\net8.0\ref\BL.dll
+C:\לימודים\FinalProject\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
+C:\לימודים\FinalProject\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
+C:\לימודים\FinalProject\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
+C:\לימודים\FinalProject\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.dll
+C:\לימודים\FinalProject\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.pdb
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.dll
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
+C:\לימודים\FinalProject\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
@@ -44,83 +30,3 @@ C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\obj\Debug\net
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
 C:\Users\User\Desktop\Handesaim\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll
-H:\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
-H:\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
-H:\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
-H:\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.dll
-H:\ProjectC#\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.pdb
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.dll
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
-H:\ProjectC#\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll
-H:\projectC\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
-H:\projectC\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
-H:\projectC\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
-H:\projectC\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.dll
-H:\projectC\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.pdb
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.dll
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
-H:\projectC\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.dll
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.pdb
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.dll
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
-C:\Users\משתמש\Desktop\שרי מסלול\project\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll
-H:\פרויקט גמר\Backend\BL\bin\Debug\net8.0\BL.deps.json
-H:\פרויקט גמר\Backend\BL\bin\Debug\net8.0\BL.dll
-H:\פרויקט גמר\Backend\BL\bin\Debug\net8.0\BL.pdb
-H:\פרויקט גמר\Backend\BL\bin\Debug\net8.0\Dal.dll
-H:\פרויקט גמר\Backend\BL\bin\Debug\net8.0\Dal.pdb
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.dll
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\refint\BL.dll
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\BL.pdb
-H:\פרויקט גמר\Backend\BL\obj\Debug\net8.0\ref\BL.dll
-H:\פרויקט גמר\StudioProject\Backend\BL\bin\Debug\net8.0\BL.deps.json
-H:\פרויקט גמר\StudioProject\Backend\BL\bin\Debug\net8.0\BL.dll
-H:\פרויקט גמר\StudioProject\Backend\BL\bin\Debug\net8.0\BL.pdb
-H:\פרויקט גמר\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.dll
-H:\פרויקט גמר\StudioProject\Backend\BL\bin\Debug\net8.0\Dal.pdb
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.AssemblyReference.cache
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.GeneratedMSBuildEditorConfig.editorconfig
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfoInputs.cache
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.AssemblyInfo.cs
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.CoreCompileInputs.cache
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.sourcelink.json
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.csproj.Up2Date
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.dll
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\refint\BL.dll
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\BL.pdb
-H:\פרויקט גמר\StudioProject\Backend\BL\obj\Debug\net8.0\ref\BL.dll

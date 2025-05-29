@@ -69,6 +69,22 @@ namespace Dal.Services
             _databaseManager.SaveChanges();
         }
 
+
+
+
+        public FullQueue GetQueueByDate(DateOnly dateOnly, TimeOnly timeOnly)
+        {
+            var existingEntity = _databaseManager.FullQueues.FirstOrDefault(e => e.DateTime == dateOnly && e.Hour == timeOnly)
+               ?? throw new KeyNotFoundException($"FreeQueue with DateTime {dateOnly} or Hour {timeOnly} not found.");
+            return existingEntity;
+        }
+
+        public List<FullQueue> GetQueueByDate(DateOnly dateOnly)
+        {
+            var existingEntity = _databaseManager.FullQueues.Where(e => e.DateTime == dateOnly).ToList()
+                ?? throw new KeyNotFoundException($"FreeQueue with DateTime {dateOnly}  not found.");
+            return existingEntity;
+        }
         public IEnumerable<FullQueue> GetByDate(DateOnly date)
         {
             if (date == default) throw new ArgumentException("Date must be a valid date.", nameof(date));
@@ -76,6 +92,7 @@ namespace Dal.Services
             return _databaseManager.FullQueues
                 .Where(fullQueue => fullQueue.DateTime == date)
                 .ToList();
+
         }
     }
 }

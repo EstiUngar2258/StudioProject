@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg'; // תמונת רקע עליונה
 import loveMusicImg from '../img/I_LOVE_MUSIC.svg'; // תמונה חדשה לגלילה
+import { useSelector } from 'react-redux';
 
 const buttons = [
   {
@@ -26,6 +27,7 @@ const buttons = [
 const Home = () => {
   const [showBtns, setShowBtns] = useState(Array(buttons.length).fill(false));
   const btnRefs = useRef([]);
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   useEffect(() => {
     buttons.forEach((_, i) => {
@@ -141,6 +143,24 @@ const Home = () => {
                   {btn.label}
                 </a>
               ))}
+              {/* כפתור לאזור האישי למשתמש מחובר */}
+              {isLoggedIn && (
+                <div className="mt-2">
+                  <a
+                    href="/dashboard"
+                    style={{
+                      color: "#43cea2",
+                      fontWeight: 700,
+                      fontSize: "1.08rem",
+                      textDecoration: "underline",
+                      letterSpacing: "1px"
+                    }}
+                  >
+                    <i className="bi bi-person-badge me-1"></i>
+                    מעבר לאזור האישי
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

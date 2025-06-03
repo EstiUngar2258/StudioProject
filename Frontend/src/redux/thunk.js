@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'; // ודא שה-import של axios קיים
-import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate } from "../api";
+import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment } from "../api";
 
 import { loginFailure } from "./userSlice";
 
@@ -120,13 +120,13 @@ export const fetchAppointmentsAsync = createAsyncThunk(
 
 export const addAppointmentAsync = createAsyncThunk(
     'appointments/addAppointment',
-    async (newAppointment, { rejectWithValue }) => {
+    async (appointmentData, { rejectWithValue }) => {
+        console.log("appointmentData", appointmentData);
         try {
-            const response = await postAsync({ endpoint: 'Appointments', body: newAppointment }); // קריאה ל-postAsync
-            return response; // החזרת התור שנוסף
+            const data = await addAppointment(appointmentData);
+            return data;
         } catch (error) {
-            console.error('Error adding appointment:', error); // לוג לדיבוג
-            return rejectWithValue(handleErrorResponse(error));
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
 );
@@ -135,7 +135,7 @@ export const fetchAvailableAppointmentsByDateAsync = createAsyncThunk(
     'appointments/fetchAvailableByDate',
     async ({ dateOnly, timeOnly }, { rejectWithValue }) => {
         try {
-            const data = await fetchAvailableAppointmentsByDate({ dateOnly, timeOnly }); // קריאה לפונקציה ב-api
+            const data = await fetchAvailableAppointmentsByDate({ dateOnly }); // קריאה לפונקציה ב-api
             return data;
         } catch (error) {
             console.error('Error fetching available appointments:', error);

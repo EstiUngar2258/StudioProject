@@ -145,13 +145,19 @@ namespace BL.Services
             {
                 List<FullQueue> list =
                 _fullqueue.GetAll().Where(fq => fq.WorkerId == workerID).ToList();
+                if (list.Count == 0)
+                    list =_fullqueue.GetAll().Where(fq => fq.ClientId == workerID).ToList();
                 List<FullQueueForClient> queueForWorker = new();
                 list.ForEach(fullQueue => queueForWorker.Add(new FullQueueForClient()
                 {
                     DateTime = fullQueue.DateTime,
                     Hour = fullQueue.Hour,
                     Id = fullQueue.Id,
-                    WorkerId = workerID
+                    WorkerId = fullQueue.WorkerId,
+                    ClientId= fullQueue.ClientId,
+                    ServiceId = fullQueue.ServiceId,
+                    Status = fullQueue.Status
+
 
                 }));
                 return queueForWorker;

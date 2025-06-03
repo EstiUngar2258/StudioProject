@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'; // ודא שה-import של axios קיים
-import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment } from "../api";
+import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment, fetchFullQueuesForWorker } from "../api";
 
 import { loginFailure } from "./userSlice";
 
@@ -140,6 +140,19 @@ export const fetchAvailableAppointmentsByDateAsync = createAsyncThunk(
         } catch (error) {
             console.error('Error fetching available appointments:', error);
             return rejectWithValue(handleErrorResponse(error));
+        }
+    }
+);
+
+export const fetchFullQueuesForWorkerAsync = createAsyncThunk(
+    'appointments/fetchFullQueuesForWorker',
+    async (workerId, { rejectWithValue }) => {
+        try {
+            const data = await fetchFullQueuesForWorker(workerId);
+            return data;
+        } catch (error) {
+            console.error('Error fetching full queues for worker:', error);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
 );

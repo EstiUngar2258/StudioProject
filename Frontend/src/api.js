@@ -44,3 +44,9 @@ export const fetchAvailableAppointmentsByDate = async ({ dateOnly, timeOnly }) =
     return response.data;
 };
 
+// קריאה לשרת לקבלת כל התורים של עובד מסוים
+export const fetchFullQueuesForWorker = async (workerId) => {
+    const response = await axios.get(`http://localhost:5235/api/FullQueue/forWorker/${workerId}`);
+    return response.data;
+};
+

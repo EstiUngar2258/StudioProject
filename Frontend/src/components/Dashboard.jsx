@@ -10,6 +10,7 @@ const Dashboard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const showUserAppointments = useSelector((state) => state.userAppointments.showUserAppointments);
+     const showUserAppointment = useSelector((state) => state.userAppointments.userAppointments);
     const user = useSelector((state) => state.auth.user);
 
     const handleToggleUserAppointments = () => {
@@ -85,7 +86,8 @@ const Dashboard = () => {
                                 boxShadow: "0 8px 32px 0 rgba(67,206,162,0.18), 0 1.5px 8px 0 #23234a",
                                 backdropFilter: "blur(4px)",
                                 position: "relative" // חשוב!
-                            }}
+                               
+                            } }
                         >
                             {/* כפתור התנתקות בפינה */}
                             <button

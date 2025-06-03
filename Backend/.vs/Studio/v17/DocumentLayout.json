@@ -1,17 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\Desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\StudioProject\\Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_\u05DE\u05E9\u05EA\u05DE\u05E9_DESKTOP_\u05E9\u05E8\u05D9_\u05DE\u05E1\u05DC\u05D5\u05DC_\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.Clients.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.Workers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\studioproject\\backend\\server\\controllers\\freequeuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\controllers\\freequeuecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\studioproject\\backend\\bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfreequeueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\services\\blfullqueueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\bl\\models\\fullqueueforclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA827593-04BE-496C-AC56-66EDDCD8561C}|BL\\BL.csproj|solutionrelative:bl\\models\\fullqueueforclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.StudioServices.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|c:\\users\\user\\desktop\\handesaim\\projectc#\\studioproject\\backend\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD4DAA2C-2722-4156-8DB7-3FE8878C2477}|Server\\Server.csproj|solutionrelative:server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,46 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BLFreeQueueService.cs",
-              "DocumentMoniker": "C:\\Users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\Desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\StudioProject\\Backend\\BL\\Services\\BLFreeQueueService.cs",
-              "RelativeDocumentMoniker": "BL\\Services\\BLFreeQueueService.cs",
-              "ToolTip": "C:\\Users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\Desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\StudioProject\\Backend\\BL\\Services\\BLFreeQueueService.cs",
-              "RelativeToolTip": "BL\\Services\\BLFreeQueueService.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAOUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T13:04:37.436Z",
+              "DocumentIndex": 1,
+              "Title": "dbo.FreeQueue [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FreeQueue.sql",
+              "ToolTip": "dbo.FreeQueue [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-03T23:09:33.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FreeQueueController.cs",
-              "DocumentMoniker": "C:\\Users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\Desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\StudioProject\\Backend\\Server\\Controllers\\FreeQueueController.cs",
-              "RelativeDocumentMoniker": "Server\\Controllers\\FreeQueueController.cs",
-              "ToolTip": "C:\\Users\\\u05DE\u05E9\u05EA\u05DE\u05E9\\Desktop\\\u05E9\u05E8\u05D9 \u05DE\u05E1\u05DC\u05D5\u05DC\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8 \u05D2\u05DE\u05E8\\StudioProject\\Backend\\Server\\Controllers\\FreeQueueController.cs",
-              "RelativeToolTip": "Server\\Controllers\\FreeQueueController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAywDUAAAAHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BLFullQueueService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFullQueueService.cs",
+              "RelativeDocumentMoniker": "BL\\Services\\BLFullQueueService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Services\\BLFullQueueService.cs",
+              "RelativeToolTip": "BL\\Services\\BLFullQueueService.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAuwJ8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T13:02:25.128Z",
+              "WhenOpened": "2025-06-03T22:42:11.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dbo.FullQueue [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.FullQueue.sql",
+              "ToolTip": "dbo.FullQueue [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-03T21:50:05.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FullQueueForClient.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Models\\FullQueueForClient.cs",
+              "RelativeDocumentMoniker": "BL\\Models\\FullQueueForClient.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\BL\\Models\\FullQueueForClient.cs",
+              "RelativeToolTip": "BL\\Models\\FullQueueForClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T20:01:44.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "dbo.StudioServices [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.StudioServices.sql",
+              "ToolTip": "dbo.StudioServices [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-03T19:39:08.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.Clients [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_\u05DE\u05E9\u05EA\u05DE\u05E9_DESKTOP_\u05E9\u05E8\u05D9_\u05DE\u05E1\u05DC\u05D5\u05DC_\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8_\u05D2\u05DE\u05E8_STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.Clients.sql",
-              "ToolTip": "dbo.Clients [Data]",
+              "Title": "dbo.Workers [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_USER_DESKTOP_HANDESAIM_PROJECTC__STUDIOPROJECT_BACKEND_DAL_DATABASE_STUDIODATABASE.MDF/True/SqlTable/dbo.Workers.sql",
+              "ToolTip": "dbo.Workers [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-03T12:02:28.32Z",
+              "WhenOpened": "2025-06-03T19:35:24.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\appsettings.json",
+              "RelativeDocumentMoniker": "Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Handesaim\\ProjectC#\\StudioProject\\Backend\\Server\\appsettings.json",
+              "RelativeToolTip": "Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T18:23:32.327Z",
               "EditorCaption": ""
             }
           ]

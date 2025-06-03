@@ -5,33 +5,65 @@ import { startOfToday, addMonths } from 'date-fns';
 import AvailableAppointmentsList from './AvailableAppointmentsList';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
 import { addAppointmentAsync } from '../redux/thunk';
+import { setUserAppointments } from '../redux/userAppointmentsSlice';
+import { id } from 'date-fns/locale';
 
 const CreateAppointmentForm = () => {
     const user = useSelector((state) => state.auth.user);
+    // אתחול state
     const [appointmentData, setAppointmentData] = useState({
-        clientId: user ? user.userId : '', // שדה תעודת זהות
-        serviceId: '',
-        workerId: '',
-        date: '',
-        time: '',
-        status: 'scheduled'
+        Id: Math.floor(Math.random() * 1_000_000_000),
+        WorkerId: 342543456, // מספר, לא מחרוזת
+        DateTime: "",
+        Hour: "",
+        ClientId: parseInt(user?.userId ?? "0"),
+        ServiceId: 111, // מספר, לא מחרוזת
+        Status: "scheduled"
     });
+    const userAppointments = useSelector((state) => state.appointments.userAppointments);
 
     const dispatch = useDispatch();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
+        let val = value;
+        if (["WorkerId", "ClientId", "ServiceId"].includes(name)) {
+            val = parseInt(value) > 0 ? parseInt(value) : 1; // תמיד חיובי
+        }
         setAppointmentData({
             ...appointmentData,
-            [name]: value
+            [name]: val
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (appointmentData.clientId && appointmentData.date && appointmentData.time) {
-            dispatch(addAppointmentAsync(appointmentData));
-            setAppointmentData({ clientId: user ? user.userId : '', serviceId: '', workerId: '', date: '', time: '', status: 'scheduled' });
+        if (appointmentData.ClientId && appointmentData.DateTime && appointmentData.Hour) {
+            try {
+                await dispatch(addAppointmentAsync(appointmentData)).unwrap();
+                dispatch(setUserAppointments(appointmentData));
+                alert("התור נוסף בהצלחה!");
+                // reset נכון אחרי שליחה מוצלחת:
+                setAppointmentData({
+                    Id: Math.floor(Math.random() * 1_000_000_000),
+                    WorkerId: 342543456,
+                    DateTime: "",
+                    Hour: "",
+                    ClientId: parseInt(user?.userId ?? "0"),
+                    ServiceId: 111,
+                    Status: "scheduled"
+                });
+            } catch (error) {
+                // כאן תופסים את השגיאה מהשרת (כולל 400)
+                if (error && error.message) {
+                    alert(error.message);
+                } else if (typeof error === "string") {
+                    alert(error);
+                } else {
+                    alert("שגיאה בהוספת התור. אנא נסה שוב.");
+                }
+                console.error("Failed to add appointment:", error);
+            }
         } else {
             alert("אנא מלא את כל השדות.");
         }
@@ -109,10 +141,10 @@ const CreateAppointmentForm = () => {
                                 </span>
                                 <input
                                     type="text"
-                                    id="clientId"
-                                    name="clientId"
+                                    id="ClientId"
+                                    name="ClientId"
                                     className="form-control"
-                                    value={appointmentData.clientId}
+                                    value={appointmentData.ClientId}
                                     onChange={handleChange}
                                     required
                                     style={{ background: "rgba(67,206,162,0.07)", color: "#fff" }}
@@ -130,10 +162,10 @@ const CreateAppointmentForm = () => {
                                 </span>
                                 <input
                                     type="date"
-                                    id="date"
-                                    name="date"
+                                    id="DateTime"
+                                    name="DateTime"
                                     className="form-control"
-                                    value={appointmentData.date}
+                                    value={appointmentData.DateTime}
                                     onChange={handleChange}
                                     required
                                     min={minDate}
@@ -148,7 +180,7 @@ const CreateAppointmentForm = () => {
                         </div>
 
                         {/* רשימת תורים פנויים */}
-                        <AvailableAppointmentsList date={appointmentData.date} />
+                        <AvailableAppointmentsList date={appointmentData.DateTime} />
 
                         {/* שדה שעה */}
                         <div className="mb-4">
@@ -159,10 +191,10 @@ const CreateAppointmentForm = () => {
                                 </span>
                                 <input
                                     type="time"
-                                    id="time"
-                                    name="time"
+                                    id="Hour"
+                                    name="Hour"
                                     className="form-control"
-                                    value={appointmentData.time}
+                                    value={appointmentData.Hour}
                                     onChange={handleChange}
                                     required
                                     style={{

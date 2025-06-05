@@ -20,6 +20,6 @@ const userAppointmentsSlice = createSlice({
     }
 });
 
-export const { setUserAppointments, toggleUserAppointments } = userAppointmentsSlice.actions;
+export const {  toggleUserAppointments } = userAppointmentsSlice.actions;
 
 export default userAppointmentsSlice.reducer;

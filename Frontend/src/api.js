@@ -50,3 +50,9 @@ export const fetchFullQueuesForWorker = async (workerId) => {
     return response.data;
 };
 
+import axios from 'axios';
+
+export const getAllServices = async () => {
+    const response = await axios.get('http://localhost:5235/api/Services'); // שנה לכתובת ה-API שלך אם צריך
+    return response.data;
+};

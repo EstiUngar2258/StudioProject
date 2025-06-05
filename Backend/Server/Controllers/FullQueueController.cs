@@ -149,15 +149,15 @@ namespace Server.Controllers
             }
         }
         [HttpPost]
-        public ActionResult<FullQueueForClient> Add([FromBody] FullQueueForClient fullQueue)
+        public ActionResult<FullQueueForClient> Add([FromBody] FullQueueForAdd fullQueue)
         {
             if (fullQueue == null)
                 return BadRequest("Queue item cannot be null");
 
             try
             {
-                fullQueueService.Add(fullQueue);
-                return Ok(fullQueue);
+                
+                return fullQueueService.Add(fullQueue);
             }
             catch (ArgumentException ex)
             {

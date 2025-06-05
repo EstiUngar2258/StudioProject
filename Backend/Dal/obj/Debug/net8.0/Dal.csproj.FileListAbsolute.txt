@@ -43,3 +43,18 @@ C:\Users\משתמש\Desktop\שרי מסלול\פרויקט גמר\StudioProject\
 C:\Users\משתמש\Desktop\שרי מסלול\פרויקט גמר\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
 C:\Users\משתמש\Desktop\שרי מסלול\פרויקט גמר\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
 C:\Users\משתמש\Desktop\שרי מסלול\פרויקט גמר\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+H:\ProjectC#\StudioProject\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll

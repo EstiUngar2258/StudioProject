@@ -1,52 +1,22 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
-
-const serviceList = [
-    {
-        title: "שיעורי נגינה",
-        desc: "שיעורים פרטיים במגוון כלים מוזיקליים עם מורים מקצועיים.",
-        icon: "bi-music-note-beamed",
-        color: "#43cea2"
-    },
-    {
-        title: "הפקות מוזיקליות",
-        desc: "הפקת שירים, עיבודים והקלטות באולפן מתקדם.",
-        icon: "bi-headphones",
-        color: "#185a9d"
-    },
-    {
-        title: "ייעוץ והכוונה",
-        desc: "ליווי אישי בבחירת מסלול מוזיקלי והתפתחות מקצועית.",
-        icon: "bi-lightbulb",
-        color: "#f7971e"
-    },
-    {
-        title: "הרכבים מוזיקליים",
-        desc: "הצטרפות להרכבים ולהקות, הופעות והקלטות משותפות.",
-        icon: "bi-people-fill",
-        color: "#fc5c7d"
-    },
-    {
-        title: "סדנאות והעשרות",
-        desc: "סדנאות יצירה, אילתור, הפקה דיגיטלית ועוד.",
-        icon: "bi-easel2",
-        color: "#6a82fb"
-    },
-    {
-        title: "חוגי ילדים ונוער",
-        desc: "חוגי מוזיקה חווייתיים לילדים ובני נוער.",
-        icon: "bi-emoji-smile",
-        color: "#ffb347"
-    }
-];
+import { fetchServices } from '../redux/servicesSlice';
 
 const Services = () => {
+    const dispatch = useDispatch();
+    const { services, status, error } = useSelector((state) => state.services);
     const navigate = useNavigate();
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
+    useEffect(() => {
+        if (status === 'idle') {
+            dispatch(fetchServices());
+        }
+    }, [dispatch, status]);
 
     const handleAddAppointment = (serviceTitle) => {
         if (!isLoggedIn) {
@@ -56,6 +26,9 @@ const Services = () => {
             navigate(`/newAppointment?service=${encodeURIComponent(serviceTitle)}`);
         }
     };
+
+    if (status === 'loading') return <div>טוען שירותים...</div>;
+    if (status === 'failed') return <div>שגיאה: {error}</div>;
 
     return (
         <div
@@ -121,7 +94,7 @@ const Services = () => {
                     אנו מציעים מגוון שירותים מקצועיים בתחום המוזיקה, לכל גיל ורמה.
                 </p>
                 <div className="row g-4 mb-4 justify-content-center">
-                    {serviceList.map((service, idx) => (
+                    {services.map((service, idx) => (
                         <div className="col-12 col-md-6 col-lg-4" key={idx}>
                             <div
                                 className="card h-100 shadow border-0 text-center"

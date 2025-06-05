@@ -5,7 +5,7 @@ import { startOfToday, addMonths } from 'date-fns';
 import AvailableAppointmentsList from './AvailableAppointmentsList';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
 import { addAppointmentAsync } from '../redux/thunk';
-import { setUserAppointments } from '../redux/userAppointmentsSlice';
+
 import { id } from 'date-fns/locale';
 
 const CreateAppointmentForm = () => {
@@ -13,12 +13,11 @@ const CreateAppointmentForm = () => {
     // אתחול state
     const [appointmentData, setAppointmentData] = useState({
         Id: Math.floor(Math.random() * 1_000_000_000),
-        WorkerId: 342543456, // מספר, לא מחרוזת
         DateTime: "",
         Hour: "",
         ClientId: parseInt(user?.userId ?? "0"),
         ServiceId: 111, // מספר, לא מחרוזת
-        Status: "scheduled"
+        
     });
     const userAppointments = useSelector((state) => state.appointments.userAppointments);
 
@@ -40,18 +39,17 @@ const CreateAppointmentForm = () => {
         e.preventDefault();
         if (appointmentData.ClientId && appointmentData.DateTime && appointmentData.Hour) {
             try {
-                await dispatch(addAppointmentAsync(appointmentData)).unwrap();
-                dispatch(setUserAppointments(appointmentData));
+                 await dispatch(addAppointmentAsync(appointmentData)).unwrap();
+                // dispatch(setUserAppointments(appointmentData));
                 alert("התור נוסף בהצלחה!");
                 // reset נכון אחרי שליחה מוצלחת:
                 setAppointmentData({
                     Id: Math.floor(Math.random() * 1_000_000_000),
-                    WorkerId: 342543456,
                     DateTime: "",
                     Hour: "",
                     ClientId: parseInt(user?.userId ?? "0"),
                     ServiceId: 111,
-                    Status: "scheduled"
+                   
                 });
             } catch (error) {
                 // כאן תופסים את השגיאה מהשרת (כולל 400)

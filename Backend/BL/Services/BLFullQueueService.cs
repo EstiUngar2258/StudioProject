@@ -38,14 +38,23 @@ namespace BL.Services
            
         
         }
-
-        public void Add(FullQueueForClient fullQueue)
+        public void ValidateFullQueueAdd(FullQueueForAdd queue)
         {
-            ValidateFullQueue(fullQueue);
+            if (queue == null) throw new ArgumentNullException(nameof(queue), "The FullQueue object cannot be null.");
+            if (queue.DateTime == default) throw new ArgumentException("DateTime must be a valid date.", nameof(queue.DateTime));
+            if (queue.Hour == default) throw new ArgumentException("Hour must be a valid time.", nameof(queue.Hour));
+            if (queue.ClientId <= 0) throw new ArgumentException("ClientId must be a positive integer.", nameof(queue.ClientId));
+            if (queue.ServiceId <= 0) throw new ArgumentException("ServiceId must be a positive integer.", nameof(queue.ServiceId));
+
+
+        }
+
+        public FullQueueForClient Add(FullQueueForAdd fullQueue)
+        {
+            ValidateFullQueueAdd(fullQueue);
             FullQueue fullQueue1 = new FullQueue()
             {
                 Id = fullQueue.Id,
-                WorkerId = fullQueue.WorkerId,
                 DateTime = fullQueue.DateTime,
                 Hour = fullQueue.Hour,
                 ClientId = fullQueue.ClientId,
@@ -54,11 +63,22 @@ namespace BL.Services
 
 
             };
+          
+            FreeQueueForWorker c=_bLFreeQueue.GetFreeQueueByDateForWorker(fullQueue1.DateTime, fullQueue1.Hour);
+            fullQueue1.WorkerId = c.WorkerId;
+            FullQueueForClient freeQueueForClient = new()
+            {
+                Id = fullQueue1.Id,
+                WorkerId= fullQueue1.WorkerId,
+                DateTime = fullQueue1.DateTime,
+                Hour = fullQueue1.Hour,
+                ClientId = fullQueue1.ClientId,
+                ServiceId = fullQueue1.ServiceId,
+                Status = "Invited"
+            };
             _fullqueue.Add(fullQueue1);
             _bLFreeQueue.Delete(fullQueue1.DateTime, fullQueue1.Hour);
-
-
-
+            return freeQueueForClient;
 
         }
 

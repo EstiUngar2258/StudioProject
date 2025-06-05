@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'; // ודא שה-import של axios קיים
-import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment, fetchFullQueuesForWorker } from "../api";
+import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment, fetchFullQueuesForWorker, getAllServices } from "../api";
 
 import { loginFailure } from "./userSlice";
 
@@ -155,4 +155,16 @@ export const fetchFullQueuesForWorkerAsync = createAsyncThunk(
             return rejectWithValue(error.response?.data || error.message);
         }
     }
+);
+
+export const fetchServices = createAsyncThunk(
+  'services/fetchServices',
+  async (_, thunkAPI) => {
+    try {
+      const data = await getAllServices();
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response?.data || error.message);
+    }
+  }
 );

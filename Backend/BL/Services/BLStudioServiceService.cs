@@ -13,22 +13,60 @@ namespace BL.Services
     public class BLStudioServiceService : IBLStudioService
 
     {
-        IStudioService _studioService;
+        private readonly IStudioService _studioService;
+        
+        private HashSet<int> existingIds = new HashSet<int>();
+        private Random random = new Random();
         public BLStudioServiceService(IDal dal)
         {
             _studioService = dal.StudioService;
 
         }
-        public void Add(StudioServiceToGet service)
+        private void ValidateStudioService(AddService service)
         {
             if (service == null)
             {
                 throw new ArgumentNullException(nameof(service), "Service cannot be null");
             }
 
+            if (string.IsNullOrWhiteSpace(service.ServiceName))
+            {
+                throw new ArgumentException("Service name cannot be null or empty", nameof(service.ServiceName));
+            }
+
+            if (service.Duration <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(service.Duration), "Duration must be greater than zero");
+            }
+
+            if (service.Price < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(service.Price), "Price cannot be negative");
+            }
+
+            // אם יש צורך, ניתן להוסיף בדיקות נוספות עבור שדות נוספים
+        }
+        
+
+        private int GenerateUniqueId()
+        {
+            int newId;
+            do
+            {
+                newId = random.Next(1, int.MaxValue); // טווח של 1 עד int.MaxValue
+            } while (existingIds.Contains(newId));
+
+            existingIds.Add(newId);
+            return newId;
+        }
+        public void Add(AddService service)
+        {
+            ValidateStudioService(service);
+
             // המרה מ- StudioServiceToGet ל- StudioService
             var studioService = new StudioService
             {
+                Id = GenerateUniqueId(), // אם ה-Id לא נדרש, ניתן להשאיר אותו ריק או לא לכלול אותו
                 ServiceName = service.ServiceName,
                 Duration = service.Duration,
                 Price = service.Price,
@@ -75,12 +113,9 @@ namespace BL.Services
             }
 
             var studioService = _studioService.GetById(id);
-            if (studioService == null)
-            {
-                throw new KeyNotFoundException("Service not found");
-            }
-
-            return new StudioServiceToGet
+            return studioService == null
+                ? throw new KeyNotFoundException($"Service with {id} not found")
+                : new StudioServiceToGet
             {
                 Id = studioService.Id,
                 ServiceName = studioService.ServiceName,
@@ -98,10 +133,7 @@ namespace BL.Services
             }
 
             var studioService = _studioService.GetById(entity.Id);
-            if (studioService == null)
-            {
-                throw new KeyNotFoundException("Service not found");
-            }
+            
 
             // עדכון המידע
             studioService.ServiceName = entity.ServiceName;

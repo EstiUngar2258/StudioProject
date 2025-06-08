@@ -351,7 +351,7 @@
     "Parameters": [
       {
         "Name": "fullQueue",
-        "Type": "BL.Models.FullQueueForClient",
+        "Type": "BL.Models.FullQueueForAdd",
         "IsRequired": true
       }
     ],
@@ -574,6 +574,80 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "Server.Controllers.StudioServiceController",
+    "Method": "GetAll",
+    "RelativePath": "api/StudioService",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.StudioServiceController",
+    "Method": "Get",
+    "RelativePath": "api/StudioService",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.StudioServiceController",
+    "Method": "Edit",
+    "RelativePath": "api/StudioService/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AddService",
+        "Type": "BL.Models.AddService",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.StudioServiceController",
+    "Method": "Delete",
+    "RelativePath": "api/StudioService/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.StudioServiceController",
+    "Method": "Update",
+    "RelativePath": "api/StudioService/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studioServiceToGet",
+        "Type": "BL.Models.StudioServiceToGet",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Server.Controllers.UserController",

@@ -25,6 +25,7 @@ namespace Dal
             services.AddSingleton<IWorker, WorkerService>();
             services.AddSingleton<IFullQueue, FullQueueService>();
             services.AddSingleton<IFreeQueue, FreeQueueService>();
+            services.AddSingleton<IStudioService, StudioServiceService>();
             ServiceProvider serviceProvider = services.BuildServiceProvider();
 
 
@@ -32,6 +33,7 @@ namespace Dal
             Worker = serviceProvider.GetService<IWorker>();
             FullQueue = serviceProvider.GetService<IFullQueue>();
             FreeQueue = serviceProvider.GetService<IFreeQueue>();
+            StudioService = serviceProvider.GetService<IStudioService>();
         }
     }
 }

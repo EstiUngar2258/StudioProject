@@ -631,17 +631,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FullQueueForClient"
+                "$ref": "#/components/schemas/FullQueueForAdd"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FullQueueForClient"
+                "$ref": "#/components/schemas/FullQueueForAdd"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FullQueueForClient"
+                "$ref": "#/components/schemas/FullQueueForAdd"
               }
             }
           }
@@ -1082,6 +1082,122 @@
         }
       }
     },
+    "/api/StudioService": {
+      "get": {
+        "tags": [
+          "StudioService"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "StudioService"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StudioService/add": {
+      "post": {
+        "tags": [
+          "StudioService"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddService"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddService"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddService"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StudioService/update": {
+      "put": {
+        "tags": [
+          "StudioService"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudioServiceToGet"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudioServiceToGet"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudioServiceToGet"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StudioService/delete": {
+      "delete": {
+        "tags": [
+          "StudioService"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/Login": {
       "post": {
         "tags": [
@@ -1116,6 +1232,28 @@
   },
   "components": {
     "schemas": {
+      "AddService": {
+        "type": "object",
+        "properties": {
+          "serviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Client": {
         "type": "object",
         "properties": {
@@ -1317,6 +1455,32 @@
         },
         "additionalProperties": false
       },
+      "FullQueueForAdd": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateTime": {
+            "type": "string",
+            "format": "date"
+          },
+          "hour": {
+            "type": "string",
+            "format": "time"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "FullQueueForClient": {
         "type": "object",
         "properties": {
@@ -1417,6 +1581,32 @@
             "items": {
               "$ref": "#/components/schemas/FullQueue"
             },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StudioServiceToGet": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "duration": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
             "nullable": true
           }
         },

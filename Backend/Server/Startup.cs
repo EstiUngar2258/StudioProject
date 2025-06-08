@@ -38,7 +38,7 @@ public class Startup
         {
             options.AddPolicy("AllowSpecificOrigin",
 
-                builder => builder.WithOrigins("http://localhost:5174") // החלף בכתובת המתאימה
+                builder => builder.WithOrigins("http://localhost:5175") // החלף בכתובת המתאימה
 
                                   .AllowAnyMethod()
                                   .AllowAnyHeader());

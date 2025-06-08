@@ -1,5 +1,4 @@
-﻿using Dal.models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace BL.Models
 {
-    public class StudioServiceToGet
+    public class AddService
     {
-        public int Id { get; set; }
-
         public string ServiceName { get; set; } = null!;
 
         public double Duration { get; set; }
@@ -18,7 +15,5 @@ namespace BL.Models
         public double Price { get; set; }
 
         public string? Description { get; set; }
-
-       
     }
 }

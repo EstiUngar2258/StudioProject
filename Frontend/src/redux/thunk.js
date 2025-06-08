@@ -109,7 +109,7 @@ export const fetchAppointmentsAsync = createAsyncThunk(
     'appointments/fetchAppointments',
     async (_, { rejectWithValue }) => {
         try {
-            const response = await getAsync('Appointments'); // קריאה ל-getAsync
+            const response = await getFreeAppointments(); // קריאה ל-getAsync
             return response; // החזרת התורים
         } catch (error) {
             console.error('Error fetching appointments:', error); // לוג לדיבוג

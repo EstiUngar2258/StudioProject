@@ -5,10 +5,12 @@ import { startOfToday, addMonths } from 'date-fns';
 import AvailableAppointmentsList from './AvailableAppointmentsList';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
 import { addAppointmentAsync } from '../redux/thunk';
-
-import { id } from 'date-fns/locale';
+import { useLocation } from "react-router-dom";
 
 const CreateAppointmentForm = () => {
+    const location = useLocation();
+    const service = location.state?.service; // כאן תקבל את ה-service
+
     const user = useSelector((state) => state.auth.user);
     // אתחול state
     const [appointmentData, setAppointmentData] = useState({
@@ -16,7 +18,7 @@ const CreateAppointmentForm = () => {
         DateTime: "",
         Hour: "",
         ClientId: parseInt(user?.userId ?? "0"),
-        ServiceId: 111, // מספר, לא מחרוזת
+        ServiceId:  parseInt(service?.id ?? "111"), // מספר, לא מחרוזת
         
     });
     const userAppointments = useSelector((state) => state.appointments.userAppointments);

@@ -10,25 +10,27 @@ import Dashboard from './components/Dashboard';
 import CreateAppointmentForm from './components/CreateAppointmentForm';
 import AppointmentList from './components/AppointmentList';
 import AvailableAppointmentsList from "./components/AvailableAppointmentsList";
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 
 const App = () => {
   return (
     <BrowserRouter>
-
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/addClient" element={<AddClient />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
-        <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
-        <Route path="/availableAppointments" element={<AvailableAppointmentsList />} /> // הוספת המסלול החדש
-      </Routes>
-
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/addClient" element={<AddClient />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
+          <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
+          <Route path="/availableAppointments" element={<AvailableAppointmentsList />} /> // הוספת המסלול החדש
+        </Routes>
+      </LocalizationProvider>
     </BrowserRouter>
   );
 };

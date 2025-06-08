@@ -30,6 +30,11 @@ export const fetchAppointments = async () => {
     return response.data; // מחזיר את הנתונים של התורים
 };
 
+export const getFreeAppointments = async () => {
+    const response = await axios.get('http://localhost:5235/api/FreeQueue');
+    return response.data; // מחזיר את הנתונים של התורים
+};
+
 export const addAppointment = async (appointmentData) => {
     const response = await axios.post('http://localhost:5235/api/FullQueue', appointmentData);
     return response.data; // מחזיר את הנתונים של התור שנוסף
@@ -50,9 +55,7 @@ export const fetchFullQueuesForWorker = async (workerId) => {
     return response.data;
 };
 
-import axios from 'axios';
-
 export const getAllServices = async () => {
-    const response = await axios.get('http://localhost:5235/api/Services'); // שנה לכתובת ה-API שלך אם צריך
+    const response = await axios.get('http://localhost:5235/api/StudioService'); // שנה לכתובת ה-API שלך אם צריך
     return response.data;
 };

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
-import { fetchServices } from '../redux/servicesSlice';
+import { fetchServices } from '../redux/thunk';
+import ServiceCard from '../components/ServiceCard'; // Assuming the ServiceCard component is in this path
 
 const Services = () => {
     const dispatch = useDispatch();
@@ -96,58 +97,10 @@ const Services = () => {
                 <div className="row g-4 mb-4 justify-content-center">
                     {services.map((service, idx) => (
                         <div className="col-12 col-md-6 col-lg-4" key={idx}>
-                            <div
-                                className="card h-100 shadow border-0 text-center"
-                                style={{
-                                    background: "rgba(34, 34, 60, 0.92)",
-                                    borderRadius: "2rem",
-                                    border: `1.5px solid ${service.color}55`,
-                                    boxShadow: `0 4px 24px 0 ${service.color}55`,
-                                    transition: "transform 0.2s",
-                                }}
-                                onMouseOver={e => e.currentTarget.style.transform = "scale(1.03)"}
-                                onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}
-                            >
-                                <div className="card-body d-flex flex-column justify-content-between">
-                                    <div>
-                                        <i
-                                            className={`bi ${service.icon} mb-3`}
-                                            style={{
-                                                fontSize: "3rem",
-                                                color: service.color,
-                                                textShadow: `0 2px 12px ${service.color}99`
-                                            }}
-                                        ></i>
-                                        <h5 className="card-title" style={{
-                                            color: service.color,
-                                            fontWeight: "bold",
-                                            fontSize: "1.35rem"
-                                        }}>
-                                            {service.title}
-                                        </h5>
-                                        <p className="card-text" style={{ color: "#e0e0e0", minHeight: "60px" }}>{service.desc}</p>
-                                    </div>
-                                    <button
-                                        onClick={() => handleAddAppointment(service.title)}
-                                        className="btn mt-3"
-                                        style={{
-                                            background: `linear-gradient(90deg, ${service.color} 0%, #43cea2 100%)`,
-                                            color: "#fff",
-                                            fontWeight: "bold",
-                                            border: "none",
-                                            borderRadius: "2rem",
-                                            boxShadow: `0 2px 12px ${service.color}99`,
-                                            fontSize: "1.08rem",
-                                            padding: "10px 28px",
-                                            letterSpacing: "1px",
-                                            transition: "background 0.2s, box-shadow 0.2s"
-                                        }}
-                                    >
-                                        <i className="bi bi-plus-circle me-2"></i>
-                                        הוסף תור
-                                    </button>
-                                </div>
-                            </div>
+                            <ServiceCard
+                                service={service}
+                                onSelect={() => handleAddAppointment(service.title)}
+                            />
                         </div>
                     ))}
                 </div>

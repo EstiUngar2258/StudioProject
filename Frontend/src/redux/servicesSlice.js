@@ -1,3 +1,6 @@
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchServices } from "./thunk";
+
 const servicesSlice = createSlice({
   name: 'services',
   initialState: {

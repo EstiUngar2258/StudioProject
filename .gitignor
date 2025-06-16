@@ -1,0 +1,40 @@
+## קובץ .gitignore לסביבת Visual Studio
+
+# קבצים אישיים של המשתמש
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# תיקיות Build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+
+# קבצי לוגים וקבצים זמניים
+*.log
+*.tlog
+*.cache
+*.dbmdl
+*.pdb
+*.ilk
+*.idb
+
+# VS Code
+.vscode/
+
+# קבצי תלות מקומיים
+*.nupkg
+*.snupkg
+*.vspscc
+*.vssscc
+
+# קבצים שנוצרים ע"י Resharper או כלי ניתוח קוד
+_ReSharper*/
+*.DotSettings.user
+.idea/
+*.sln.iml

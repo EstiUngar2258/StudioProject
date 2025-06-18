@@ -168,3 +168,17 @@ export const fetchServices = createAsyncThunk(
     }
   }
 );
+
+// Thunk
+export const fetchWorkerShifts = createAsyncThunk(
+  'worker/fetchWorkerShifts',
+  async (workerId, thunkAPI) => {
+    const response = await fetchFullQueuesForWorker(workerId);
+    if (response.error) {
+      return thunkAPI.rejectWithValue(response.error);
+    }
+    // כאן תוכל לעבד את הנתונים אם צריך
+    // נניח שכל אובייקט כולל day ו-hours (מערך שעות)
+    return response;
+  }
+);

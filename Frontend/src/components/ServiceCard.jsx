@@ -173,7 +173,10 @@ const ServiceCard = ({ service, onSelect }) => {
             fontSize: "1.13rem",
             textShadow: "0 1px 8px #23234a"
           }}
-          onClick={() => onSelect && onSelect(service) && navigate('\CreateAppointmentForm.jsx', { state: { service } })}
+           onClick={() => {
+    if (onSelect) onSelect(service.id);
+    navigate('/newAppointment', { state: { service } });
+  }}
         >
           הוספת תור
         </Button>

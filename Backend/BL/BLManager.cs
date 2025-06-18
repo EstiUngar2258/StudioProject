@@ -15,6 +15,7 @@ namespace BL
         public IBLFreeQueue FreeQueue { get; }
         public IBLFullQueue FullQueue { get; }
         public IBLStudioService StudioService { get; }
+        public IBLWorker Worker { get; }
         public BLManager( string connectiondb)
         {
             ServiceCollection services = new ServiceCollection();
@@ -25,6 +26,7 @@ namespace BL
             services.AddSingleton<IBLFreeQueue, BLFreeQueueService>();
             services.AddSingleton<IBLFullQueue, BLFullQueueService>();
             services.AddSingleton<IBLStudioService, BLStudioServiceService>();
+            services.AddSingleton<IBLWorker, BLWorkerService>();
 
 
             ServiceProvider serviceProvider = services.BuildServiceProvider();
@@ -33,6 +35,7 @@ namespace BL
             FullQueue = serviceProvider.GetService<IBLFullQueue>();
             FreeQueue = serviceProvider.GetService<IBLFreeQueue>();
             StudioService = serviceProvider.GetService<IBLStudioService>();
+            Worker = serviceProvider.GetService<IBLWorker>();
 
         }
     }

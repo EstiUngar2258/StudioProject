@@ -1,27 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addAppointment } from '../redux/appointmentsSlice';
+import { addAppointmentAsync } from '../redux/thunk';
 import { startOfToday, addMonths } from 'date-fns';
 import AvailableAppointmentsList from './AvailableAppointmentsList';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
-import { addAppointmentAsync } from '../redux/thunk';
 import { useLocation } from "react-router-dom";
 
 const CreateAppointmentForm = () => {
     const location = useLocation();
-    const service = location.state?.service; // כאן תקבל את ה-service
+    const service = location.state?.service; // קבלת השירות מהניווט
 
     const user = useSelector((state) => state.auth.user);
-    // אתחול state
+
     const [appointmentData, setAppointmentData] = useState({
         Id: Math.floor(Math.random() * 1_000_000_000),
         DateTime: "",
         Hour: "",
         ClientId: parseInt(user?.userId ?? "0"),
-        ServiceId:  parseInt(service?.id ?? "111"), // מספר, לא מחרוזת
-        
+        ServiceId: service?.id ?? 0, // מזהה השירות שנבחר
     });
-    const userAppointments = useSelector((state) => state.appointments.userAppointments);
 
     const dispatch = useDispatch();
 
@@ -29,7 +26,7 @@ const CreateAppointmentForm = () => {
         const { name, value } = e.target;
         let val = value;
         if (["WorkerId", "ClientId", "ServiceId"].includes(name)) {
-            val = parseInt(value) > 0 ? parseInt(value) : 1; // תמיד חיובי
+            val = parseInt(value) > 0 ? parseInt(value) : 1;
         }
         setAppointmentData({
             ...appointmentData,
@@ -41,20 +38,16 @@ const CreateAppointmentForm = () => {
         e.preventDefault();
         if (appointmentData.ClientId && appointmentData.DateTime && appointmentData.Hour) {
             try {
-                 await dispatch(addAppointmentAsync(appointmentData)).unwrap();
-                // dispatch(setUserAppointments(appointmentData));
+                await dispatch(addAppointmentAsync(appointmentData)).unwrap();
                 alert("התור נוסף בהצלחה!");
-                // reset נכון אחרי שליחה מוצלחת:
                 setAppointmentData({
                     Id: Math.floor(Math.random() * 1_000_000_000),
                     DateTime: "",
                     Hour: "",
                     ClientId: parseInt(user?.userId ?? "0"),
-                    ServiceId: 111,
-                   
+                    ServiceId: service?.id ?? 0,
                 });
             } catch (error) {
-                // כאן תופסים את השגיאה מהשרת (כולל 400)
                 if (error && error.message) {
                     alert(error.message);
                 } else if (typeof error === "string") {
@@ -131,6 +124,11 @@ const CreateAppointmentForm = () => {
                         <i className="bi bi-calendar-plus me-2" style={{ color: "#43cea2" }}></i>
                         קביעת תור חדש
                     </h2>
+                    {service && (
+                        <div style={{ color: "#43cea2", fontWeight: 700, marginBottom: 12 }}>
+                            שירות שנבחר: {service.serviceName}
+                        </div>
+                    )}
                     <form onSubmit={handleSubmit}>
                         {/* שדה תעודת זהות */}
                         <div className="mb-3">
@@ -171,7 +169,7 @@ const CreateAppointmentForm = () => {
                                     min={minDate}
                                     max={oneMonthFromToday}
                                     style={{
-                                        background: "#fff", // רקע בהיר!
+                                        background: "#fff",
                                         color: "#23234a",
                                         colorScheme: "light"
                                     }}
@@ -198,7 +196,7 @@ const CreateAppointmentForm = () => {
                                     onChange={handleChange}
                                     required
                                     style={{
-                                        background: "#fff", // רקע בהיר!
+                                        background: "#fff",
                                         color: "#23234a",
                                         colorScheme: "light"
                                     }}

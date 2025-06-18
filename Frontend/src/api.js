@@ -59,3 +59,4 @@ export const getAllServices = async () => {
     const response = await axios.get('http://localhost:5235/api/StudioService'); // שנה לכתובת ה-API שלך אם צריך
     return response.data;
 };
+

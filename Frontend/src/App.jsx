@@ -12,6 +12,7 @@ import AppointmentList from './components/AppointmentList';
 import AvailableAppointmentsList from "./components/AvailableAppointmentsList";
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import WorkerDashboard from './components/WorkerDashbord';
 
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
           <Route path="/addClient" element={<AddClient />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/workerDashboard" element={<WorkerDashboard />} />
+             <Route path="/newAppointment/:courseId" element={<CreateAppointmentForm />} />
           <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
           <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
           <Route path="/availableAppointments" element={<AvailableAppointmentsList />} /> // הוספת המסלול החדש

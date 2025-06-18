@@ -1,18 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleUserAppointments } from '../redux/userAppointmentsSlice';
 import UserAppointments from './UserAppointments';
 import { useNavigate } from 'react-router-dom';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
 import { setUser } from '../redux/authSlice'; // ודא שיש לך פעולה כזו
+import HistoryAppointments from './HistoryAppointments';
 
 const Dashboard = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const showUserAppointments = useSelector((state) => state.userAppointments.showUserAppointments);
-     const showUserAppointment = useSelector((state) => state.userAppointments.userAppointments);
+    const showUserAppointment = useSelector((state) => state.userAppointments.userAppointments);
     const user = useSelector((state) => state.auth.user);
-
+    const [showHistory, setShowHistory] = useState(false);
     const handleToggleUserAppointments = () => {
         dispatch(toggleUserAppointments());
     };
@@ -86,8 +87,8 @@ const Dashboard = () => {
                                 boxShadow: "0 8px 32px 0 rgba(67,206,162,0.18), 0 1.5px 8px 0 #23234a",
                                 backdropFilter: "blur(4px)",
                                 position: "relative" // חשוב!
-                               
-                            } }
+
+                            }}
                         >
                             {/* כפתור התנתקות בפינה */}
                             <button
@@ -194,32 +195,59 @@ const Dashboard = () => {
                                         <i className="bi bi-house-door me-2"></i>
                                         דף הבית
                                     </button>
+
                                 </div>
-
-                                {/* כפתור הצגת/הסתרת תורים */}
-                                <button
-                                    className="btn btn-outline-info rounded-pill px-4 mb-3"
-                                    style={{
-                                        fontWeight: 700,
-                                        fontSize: "1.08rem",
-                                        letterSpacing: "1px",
-                                        border: "2px solid #43cea2",
-                                        color: "#43cea2",
-                                        background: "rgba(67,206,162,0.07)",
-                                        boxShadow: "0 2px 8px #43cea2a0",
-                                        transition: "background 0.2s, color 0.2s"
-                                    }}
-                                    onClick={handleToggleUserAppointments}
-                                >
-                                    {showUserAppointments ? 'הסתר תורים' : 'הצג תורים'}
-                                </button>
-
-                                {/* הצגת תורים */}
-                                {showUserAppointments && (
-                                    <div className="mt-4">
-                                        <UserAppointments />
+                                <div className="user-appointments" style={{ color: "#fff", position: "relative" }}>
+                                    <div style={{ position: "relative", minHeight: 48 }}>
+                                        {/* כפתור היסטוריה בצד ימין למעלה */}
+                                        <div className="d-flex justify-content-end align-items-center mb-3">
+                                            <button
+                                                style={{
+                                                    background: showHistory ? "#185a9d" : "#43cea2",
+                                                    color: "#fff",
+                                                    border: "none",
+                                                    borderRadius: "1.5rem",
+                                                    padding: "0.5rem 1.2rem",
+                                                    fontWeight: 700,
+                                                    boxShadow: "0 2px 8px #23234a55",
+                                                    cursor: "pointer"
+                                                }}
+                                                onClick={() => setShowHistory(h => !h)}
+                                            >
+                                                {showHistory ? "הסתר היסטוריה" : "היסטוריה"}
+                                            </button>
+                                        </div>
+                                        {showHistory && (
+                                            <div className="mt-4">
+                                                <HistoryAppointments />
+                                            </div>
+                                        )}
                                     </div>
-                                )}
+                                    {/* כפתור הצגת/הסתרת תורים */}
+                                    <button
+                                        className="btn btn-outline-info rounded-pill px-4 mb-3"
+                                        style={{
+                                            fontWeight: 700,
+                                            fontSize: "1.08rem",
+                                            letterSpacing: "1px",
+                                            border: "2px solid #43cea2",
+                                            color: "#43cea2",
+                                            background: "rgba(67,206,162,0.07)",
+                                            boxShadow: "0 2px 8px #43cea2a0",
+                                            transition: "background 0.2s, color 0.2s"
+                                        }}
+                                        onClick={handleToggleUserAppointments}
+                                    >
+                                        {showUserAppointments ? 'הסתר תורים' : 'הצג תורים'}
+                                    </button>
+
+                                    {/* הצגת תורים */}
+                                    {showUserAppointments && (
+                                        <div className="mt-4">
+                                            <UserAppointments />
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>

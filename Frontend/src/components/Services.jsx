@@ -19,12 +19,12 @@ const Services = () => {
         }
     }, [dispatch, status]);
 
-    const handleAddAppointment = (serviceTitle) => {
+    const handleAddAppointment = (serviceId) => {
         if (!isLoggedIn) {
             alert("עליך להירשם כלקוח במערכת לפני הוספת תור.");
             navigate('/Login');
         } else {
-            navigate(`/newAppointment?service=${encodeURIComponent(serviceTitle)}`);
+            navigate(`/newAppointment/${serviceId}`);
         }
     };
 
@@ -99,7 +99,7 @@ const Services = () => {
                         <div className="col-12 col-md-6 col-lg-4" key={idx}>
                             <ServiceCard
                                 service={service}
-                                onSelect={() => handleAddAppointment(service.title)}
+                                onSelect={(serviceId) => handleAddAppointment(serviceId)}
                             />
                         </div>
                     ))}

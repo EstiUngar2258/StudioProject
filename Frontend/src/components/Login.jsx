@@ -60,7 +60,10 @@ const Login = () => {
                 const userData = resultAction.payload;
                 dispatch(login(userData));
                 localStorage.setItem('user', JSON.stringify(userData));
-                navigate('/dashboard');
+                if( userData.userType === 'Worker' || userData.userType === 'Admin') {
+                    navigate('/workerDashboard');
+                } else {
+                navigate('/dashboard');}
             }
         } catch (error) {
             alert(error.response?.data?.message || 'שם משתמש או תעודת זהות שגויים');

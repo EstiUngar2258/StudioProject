@@ -6,13 +6,7 @@ import { styled } from '@mui/material/styles';
 import { Badge } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-// דוגמה לנתוני תורים (להחליף בנתונים מהשרת)
-// const appointments = [
-//   { date: '2025-06-10', hour: '10:00', status: 'busy' },
-//   { date: '2025-06-10', hour: '11:00', status: 'free' },
-//   { date: '2025-06-11', hour: '09:00', status: 'busy' },
-//   // ...
-// ];
+
 
 const CustomDay = styled(PickersDay, {
   shouldForwardProp: (prop) => prop !== 'isBusy',

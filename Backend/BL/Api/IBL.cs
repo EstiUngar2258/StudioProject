@@ -14,5 +14,6 @@ namespace BL.Api
         public IBLFullQueue FullQueue { get; }
         public IBLFreeQueue FreeQueue { get; }
         public IBLStudioService StudioService { get; }
+        public IBLWorker Worker { get; }
     }
 }

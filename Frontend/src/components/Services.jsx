@@ -22,7 +22,7 @@ const Services = () => {
     const handleAddAppointment = (serviceId) => {
         if (!isLoggedIn) {
             alert("עליך להירשם כלקוח במערכת לפני הוספת תור.");
-            navigate('/Login');
+            navigate('/login');
         } else {
             navigate(`/newAppointment/${serviceId}`);
         }

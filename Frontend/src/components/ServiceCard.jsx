@@ -11,6 +11,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 // ServiceCard.jsx
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const parseDescription = (desc) => {
   // אם יש "כולל", פצל
@@ -27,7 +28,7 @@ const parseDescription = (desc) => {
 const ServiceCard = ({ service, onSelect }) => {
      const navigate = useNavigate();
   const { main, list } = parseDescription(service.description || "");
-
+const user =  useSelector((state => state.auth.user));
   return (
     <Card
       sx={{
@@ -174,7 +175,15 @@ const ServiceCard = ({ service, onSelect }) => {
             textShadow: "0 1px 8px #23234a"
           }}
            onClick={() => {
-    if (onSelect) onSelect(service.id);
+    if ( onSelect) onSelect(service.id);
+    if (user && user.role === 'admin') {
+      navigate('/appointments', { state: { service } });
+      return;
+    }
+    if (!user) {
+      navigate('/login', { state: { from: '/newAppointment', service } });
+      return;
+    }
     navigate('/newAppointment', { state: { service } });
   }}
         >

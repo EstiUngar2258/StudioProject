@@ -12,7 +12,7 @@ const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const handleProfileClick = () => {
-        if(user.userType === 'worker') {
+        if(user.userType === 'Worker') {
             navigate('/workerDashboard');}
             else{
 

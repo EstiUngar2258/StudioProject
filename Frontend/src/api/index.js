@@ -8,3 +8,4 @@ export const fetchAvailableAppointmentsByDate = async ({ dateOnly, timeOnly }) =
     });
     return response.data;
 };
+

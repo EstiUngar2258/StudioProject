@@ -5,7 +5,8 @@ import userAppointmentsSlice from './userAppointmentsSlice';
 import appointmentsSlice from './appointmentsSlice';
 import authReducer from './authSlice';
 import servicesReducer from '../redux/servicesSlice'; 
-import workerReducer from './workerSlice'// ייבוא יחיד ונכון
+import workerReducer from './workerSlice'
+import workersReducer from './workersSlice'// ייבוא יחיד ונכון
 
 const store = configureStore({
     reducer: {
@@ -15,7 +16,8 @@ const store = configureStore({
         appointments: appointmentsSlice,
         userAppointments: userAppointmentsSlice,
         services: servicesReducer,
-        worker:workerReducer, // הוספת ה-reducer של עובדים
+        worker:workerReducer, 
+        workers:workersReducer// הוספת ה-reducer של עובדים
     },
 });
 

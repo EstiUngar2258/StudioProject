@@ -28,9 +28,6 @@ const Services = () => {
         }
     };
 
-    if (status === 'loading') return <div>טוען שירותים...</div>;
-    if (status === 'failed') return <div>שגיאה: {error}</div>;
-
     return (
         <div
             style={{
@@ -65,46 +62,78 @@ const Services = () => {
                 <circle cx="200" cy="100" r="18" fill="#43cea2" fillOpacity="0.09" />
             </svg>
 
-            <div className="container py-5" style={{ zIndex: 2, marginTop: "100px" }}>
-                <h1
-                    className="text-center mb-4"
+            {(status === 'loading' || status === 'failed') && (
+                <div
+                    className="d-flex flex-column align-items-center justify-content-center"
                     style={{
-                        fontFamily: "'Rubik', 'Heebo', Arial, sans-serif",
-                        fontWeight: 900,
-                        letterSpacing: "2px",
-                        textShadow: "0 2px 24px #43cea2, 0 1px 1px #23234a",
-                        color: "#43cea2",
-                        fontSize: "2.7rem"
+                        minHeight: "60vh",
+                        position: "absolute",
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        zIndex: 10,
+                        background: "rgba(24,24,40,0.7)"
                     }}
                 >
-                    <i className="bi bi-stars me-2" style={{ color: "#43cea2" }}></i>
-                    השירותים שלנו
-                    <span
-                        style={{
-                            display: "block",
-                            height: "4px",
-                            width: "60%",
-                            margin: "12px auto 0 auto",
-                            borderRadius: "2px",
-                            background: "linear-gradient(90deg, #43cea2 0%, #185a9d 100%)",
-                            boxShadow: "0 2px 12px #43cea2b0"
-                        }}
-                    ></span>
-                </h1>
-                <p className="lead text-center mb-5" style={{ color: "#e0e0e0", fontSize: "1.18rem" }}>
-                    אנו מציעים מגוון שירותים מקצועיים בתחום המוזיקה, לכל גיל ורמה.
-                </p>
-                <div className="row g-4 mb-4 justify-content-center">
-                    {services.map((service, idx) => (
-                        <div className="col-12 col-md-6 col-lg-4" key={idx}>
-                            <ServiceCard
-                                service={service}
-                                onSelect={(serviceId) => handleAddAppointment(serviceId)}
-                            />
-                        </div>
-                    ))}
+                    {status === 'loading' && (
+                        <>
+                            <div className="spinner-border text-success mb-3" role="status">
+                                <span className="visually-hidden">טוען...</span>
+                            </div>
+                            <div style={{ color: "#43cea2", fontWeight: 700 }}>טוען שירותים...</div>
+                        </>
+                    )}
+                    {status === 'failed' && (
+                        <>
+                            <i className="bi bi-exclamation-triangle" style={{ fontSize: "2.5rem", color: "#ff5252" }}></i>
+                            <div style={{ color: "#ff5252", fontWeight: 700, marginTop: 10 }}>שגיאה בטעינת השירותים</div>
+                            <div style={{ color: "#fff", marginTop: 5 }}>{error || "נסה לרענן את הדף"}</div>
+                        </>
+                    )}
                 </div>
-            </div>
+            )}
+
+            {/* שאר התוכן מוצג רק אם נטען בהצלחה */}
+            {status === 'succeeded' && (
+                <div className="container py-5" style={{ zIndex: 2, marginTop: "100px" }}>
+                    <h1
+                        className="text-center mb-4"
+                        style={{
+                            fontFamily: "'Rubik', 'Heebo', Arial, sans-serif",
+                            fontWeight: 900,
+                            letterSpacing: "2px",
+                            textShadow: "0 2px 24px #43cea2, 0 1px 1px #23234a",
+                            color: "#43cea2",
+                            fontSize: "2.7rem"
+                        }}
+                    >
+                        <i className="bi bi-stars me-2" style={{ color: "#43cea2" }}></i>
+                        השירותים שלנו
+                        <span
+                            style={{
+                                display: "block",
+                                height: "4px",
+                                width: "60%",
+                                margin: "12px auto 0 auto",
+                                borderRadius: "2px",
+                                background: "linear-gradient(90deg, #43cea2 0%, #185a9d 100%)",
+                                boxShadow: "0 2px 12px #43cea2b0"
+                            }}
+                        ></span>
+                    </h1>
+                    <p className="lead text-center mb-5" style={{ color: "#e0e0e0", fontSize: "1.18rem" }}>
+                        אנו מציעים מגוון שירותים מקצועיים בתחום המוזיקה, לכל גיל ורמה.
+                    </p>
+                    <div className="row g-4 mb-4 justify-content-center">
+                        {services.map((service, idx) => (
+                            <div className="col-12 col-md-6 col-lg-4" key={idx}>
+                                <ServiceCard
+                                    service={service}
+                                    onSelect={(serviceId) => handleAddAppointment(serviceId)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

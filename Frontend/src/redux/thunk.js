@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from 'axios'; // ודא שה-import של axios קיים
-import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment, fetchFullQueuesForWorker, getAllServices } from "../api";
+import { addClient, fetchData, loginUser, fetchAvailableAppointmentsByDate, addAppointment, fetchFullQueuesForWorker, getAllServices, getWorkerById, fetchAllWorkers, addWorker, updateWorker } from "../api";
 
 import { loginFailure } from "./userSlice";
 
@@ -25,7 +25,7 @@ export const fetchDataAsyncAction = createAsyncThunk(
     async (_, { rejectWithValue }) => {
         try {
             const response = await fetchData(); // קריאה לפונקציית ה-API
-            return response.data; // החזרת הנתונים
+            return response; // החזרת הנתונים
         } catch (error) {
             console.error('Error fetching data:', error); // לוג לדיבוג
             return rejectWithValue(handleErrorResponse(error));
@@ -64,7 +64,7 @@ export const loginUserAsync = createAsyncThunk(
         try {
             const response = await loginUser(credentials);
            
-            console.log('response.data', response.data); // שימוש בפונקציה מ-api.js
+            console.log('response.data', response); // שימוש בפונקציה מ-api.js
             return response; // מחזיר את תגובת השרת
         } catch (error) {
             const handledError = {
@@ -181,4 +181,51 @@ export const fetchWorkerShifts = createAsyncThunk(
     // נניח שכל אובייקט כולל day ו-hours (מערך שעות)
     return response;
   }
+);
+
+export const fetchWorkerByIdAsync = createAsyncThunk(
+    'worker/fetchWorkerById',
+    async (workerId, { rejectWithValue }) => {
+        try {
+            const data = await getWorkerById(workerId);
+            console.log("Worker data fetched:", data); // לוג לדיבוג
+            return data;
+        } catch (error) {
+            console.error('Error fetching worker by ID:', error);
+            return rejectWithValue(error.response?.data || error.message);
+        }
+    }
+);
+
+export const fetchAllWorkersAsync = createAsyncThunk(
+    'workers/fetchAll',
+    async (_, { rejectWithValue }) => {
+        try {
+            return await fetchAllWorkers();
+        } catch (err) {
+            return rejectWithValue(err.response?.data || err.message);
+        }
+    }
+);
+
+export const addWorkerAsync = createAsyncThunk(
+    'workers/addWorker',
+    async (workerData, { rejectWithValue }) => {
+        try {
+            return await addWorker(workerData);
+        } catch (err) {
+            return rejectWithValue(err.response?.data || err.message);
+        }
+    }
+);
+
+export const updateWorkerAsync = createAsyncThunk(
+    'workers/updateWorker',
+    async (workerData, { rejectWithValue }) => {
+        try {
+            return await updateWorker(workerData);
+        } catch (err) {
+            return rejectWithValue(err.response?.data || err.message);
+        }
+    }
 );

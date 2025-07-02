@@ -14,6 +14,8 @@ const Navbar = () => {
     const handleProfileClick = () => {
         if(user.userType === 'Worker') {
             navigate('/workerDashboard');}
+        else if(user.userType === 'Admin') {
+            navigate('/adminDashboard');}
             else{
 
         navigate('/dashboard');}

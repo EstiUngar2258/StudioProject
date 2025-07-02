@@ -32,6 +32,15 @@ public class BLUserService: IBLUser
         var worker = _context.Worker.GetAll().ToList().FirstOrDefault(e => e.FirstName == request.Name && e.Id == request.IdNumber);
         if (worker != null)
         {
+            if (worker.FirstName=="Admin")
+                return new User
+                {
+                    UserId = worker.Id,
+                    UserType = "Admin",
+                    UserName = worker.FirstName,
+                    Email = worker.Email
+                };
+
             return new User
             {
                 UserId = worker.Id,
@@ -57,6 +66,10 @@ public class BLUserService: IBLUser
             {
                 RedirectToWorkerFunctions(userDto);
             }
+            else if (userDto.UserType == "Admin")
+            {
+                RedirectToAdminFunctions(userDto);
+            }
         }
         else
         {
@@ -69,7 +82,11 @@ public class BLUserService: IBLUser
         // לוגיקה להפניית הלקוח לאזור האישי
         Console.WriteLine("RRRRRRRRRRRRRRRRRRRR");
     }
-
+    private void RedirectToAdminFunctions(User clientDetails)
+    {
+        
+        Console.WriteLine("aaaaaaaaaaaaaa");
+    }
     private void RedirectToWorkerFunctions(User workerDetails)
     {
         // לוגיקה להפניית העובד לפונקציות הרלוונטיות

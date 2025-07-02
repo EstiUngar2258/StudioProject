@@ -68,7 +68,7 @@ namespace Server.Controllers
             }
         }
         [HttpGet("{id:int}")]
-        public ActionResult GetWorker(int id)
+        public IActionResult GetWorker(int id)
         {
             try
             {

@@ -60,3 +60,23 @@ export const getAllServices = async () => {
     return response.data;
 };
 
+export const getWorkerById = async (id) => {
+    const response = await axios.get(`http://localhost:5235/api/Worker/${id}`);
+    return response.data; // רק הנתונים!
+};
+
+export const fetchAllWorkers = async () => {
+    const response = await axios.get('http://localhost:5235/api/Worker');
+    return response.data; // מחזיר מערך עובדים
+};
+
+export const addWorker = async (workerData) => {
+    const response = await axios.post('http://localhost:5235/api/Worker', workerData);
+    return response.data;
+};
+
+export const updateWorker = async (workerData) => {
+    // workerData כולל את ה-id
+    const response = await axios.put('http://localhost:5235/api/Worker', workerData);
+    return response.data;
+};

@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Paper, Button } from '@mui/material';
+import { Box, Typography, Paper, Button, Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
-import { useSelector, useDispatch } from 'react-redux';
-import { setUser } from '../redux/authSlice';
+import { fetchWorkerByIdAsync } from '../redux/thunk';
+import { useDispatch, useSelector } from 'react-redux';
 import WorkerSchedule from './WorkerSchedule';
+import { setUser } from '../redux/authSlice';
 
 const WorkerDashboard = () => {
     const [showSchedule, setShowSchedule] = useState(false);
-    const user = useSelector(state => state.auth.user);
-    localStorage.setItem('user', JSON.stringify(user));
+    const [openDetails, setOpenDetails] = useState(false);
     const dispatch = useDispatch();
 
+    const user = useSelector(state => state.auth.user);
+    const worker = useSelector(state => state.worker.worker);
+    const workerStatus = useSelector(state => state.worker.status);
+    const workerError = useSelector(state => state.worker.error);
+
     useEffect(() => {
+        if (user?.userId) {
+            dispatch(fetchWorkerByIdAsync(user.userId));
+        }
         const savedUser = localStorage.getItem('user');
         if (savedUser) {
             dispatch(setUser(JSON.parse(savedUser)));
         }
-    }, [dispatch]);
+    }, [dispatch, user?.userId]);
 
     return (
         <Box
@@ -55,7 +64,7 @@ const WorkerDashboard = () => {
             <Box
                 sx={{
                     zIndex: 2,
-                    maxWidth: 850, // הרחבה משמעותית
+                    maxWidth: 850,
                     width: '100%',
                     marginTop: '100px',
                     transition: 'max-width 0.3s'
@@ -70,9 +79,35 @@ const WorkerDashboard = () => {
                         boxShadow: "0 8px 32px 0 rgba(67,206,162,0.18), 0 1.5px 8px 0 #23234a",
                         backdropFilter: "blur(4px)",
                         padding: "2.5rem 2rem",
-                        textAlign: "center"
+                        textAlign: "center",
+                        position: "relative" // חשוב לכפתור בפינה
                     }}
                 >
+                    {/* כפתור פרטי עובד קטן בפינה בלבד */}
+                    <IconButton
+                        aria-label="פרטי עובד"
+                        onClick={() => setOpenDetails(true)}
+                        sx={{
+                            position: 'absolute',
+                            top: 18,
+                            right: 18,
+                            background: "rgba(67,206,162,0.12)",
+                            color: "#43cea2",
+                            borderRadius: "50%",
+                            width: 38,
+                            height: 38,
+                            boxShadow: "0 2px 8px #43cea222",
+                            transition: "background 0.2s",
+                            '&:hover': {
+                                background: "#43cea2",
+                                color: "#fff",
+                            },
+                            zIndex: 2
+                        }}
+                    >
+                        <i className="bi bi-person-lines-fill" style={{ fontSize: "1.25rem" }}></i>
+                    </IconButton>
+
                     <Typography
                         variant="h4"
                         component="h2"
@@ -111,6 +146,15 @@ const WorkerDashboard = () => {
                     >
                         כאן תוכל לנהל משימות, לצפות בלוח הזמנים שלך ולעדכן את הפרופיל.
                     </Typography>
+
+                    {/* הצגת פרטי העובד */}
+                    {workerStatus === 'loading' && (
+                        <Typography sx={{ color: "#43cea2", mt: 2 }}>טוען פרטי עובד...</Typography>
+                    )}
+                    {workerStatus === 'failed' && (
+                        <Typography sx={{ color: "#ff5252", mt: 2 }}>שגיאה: {workerError}</Typography>
+                    )}
+
                     <Button
                         variant="contained"
                         sx={{
@@ -135,6 +179,81 @@ const WorkerDashboard = () => {
                             <WorkerSchedule />
                         </Box>
                     )}
+
+                    {/* דיאלוג פרטי עובד */}
+                    <Dialog open={openDetails} onClose={() => setOpenDetails(false)} maxWidth="xs" fullWidth>
+                        <DialogTitle sx={{ color: "#43cea2", fontWeight: 700, textAlign: "center", fontSize: "1.15rem" }}>
+                            <Box display="flex" alignItems="center" justifyContent="center">
+                                <i className="bi bi-person-lines-fill" style={{ marginLeft: 8 }}></i>
+                                פרטי עובד
+                                <IconButton
+                                    aria-label="close"
+                                    onClick={() => setOpenDetails(false)}
+                                    sx={{
+                                        position: 'absolute',
+                                        left: 8,
+                                        top: 8,
+                                        color: "#43cea2",
+                                    }}
+                                >
+                                    <CloseIcon />
+                                </IconButton>
+                            </Box>
+                        </DialogTitle>
+                        <DialogContent dividers sx={{ background: "rgba(67,206,162,0.07)" }}>
+                            {workerStatus === 'loading' && (
+                                <Typography sx={{ color: "#43cea2", mt: 2, textAlign: "center" }}>טוען פרטי עובד...</Typography>
+                            )}
+                            {workerStatus === 'failed' && (
+                                <Typography sx={{ color: "#ff5252", mt: 2, textAlign: "center" }}>שגיאה: {workerError}</Typography>
+                            )}
+                            {worker && (
+                                <Box
+                                    sx={{
+                                        display: "grid",
+                                        gridTemplateColumns: "1fr",
+                                        gap: 1.2,
+                                        alignItems: "center",
+                                        color: "#23234a",
+                                        fontSize: "1.02rem"
+                                    }}
+                                >
+                                    <div>
+                                        <i className="bi bi-person me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>שם:</b> {worker.firstName} {worker.lastName}
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-telephone me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>טלפון:</b> {worker.phone}
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-person-badge me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>סוג:</b> {worker.workerType}
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-cake2 me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>גיל:</b> {worker.age ?? '-'}
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-cash-coin me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>שכר/שעה:</b> {worker.salaryForHour} ₪
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-award me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>ותק:</b> {worker.seniority} שנים
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-gift me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>בונוס:</b> {worker.bonus ?? '-'}
+                                    </div>
+                                    <div>
+                                        <i className="bi bi-envelope-at me-2" style={{ color: "#43cea2" }}></i>
+                                        <b>אימייל:</b> {worker.email}
+                                    </div>
+                                </Box>
+                            )}
+                        </DialogContent>
+                    </Dialog>
                 </Paper>
             </Box>
         </Box>

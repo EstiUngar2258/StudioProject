@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../redux/authSlice';
+import { login, setUser } from '../redux/authSlice';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../api';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { loginUserAsync } from '../redux/thunk';
+import { fetchWorkerByIdAsync, loginUserAsync } from '../redux/thunk';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
 
 const Login = () => {
@@ -60,9 +60,12 @@ const Login = () => {
                 const userData = resultAction.payload;
                 dispatch(login(userData));
                 localStorage.setItem('user', JSON.stringify(userData));
-                if( userData.userType === 'Worker' || userData.userType === 'Admin') {
+                if( userData.userType === 'Worker') {
+                    console.log("user: ",user)
                     navigate('/workerDashboard');
-                } else {
+                }if( userData.userType === 'Admin') {
+                    navigate('/adminDashboard');}
+                 else {
                 navigate('/dashboard');}
             }
         } catch (error) {

@@ -229,3 +229,16 @@ export const updateWorkerAsync = createAsyncThunk(
         }
     }
 );
+
+
+export const addFreeQueuesAsync = createAsyncThunk(
+    'freeQueues/add',
+    async (freeQueues, { rejectWithValue }) => {
+        try {
+            const response = await axios.post('http://localhost:5235/api/FreeQueue/Add', freeQueues);
+            return response.data;
+        } catch (error) {
+            return rejectWithValue(error.response?.data || error.message);
+        }
+    }
+);

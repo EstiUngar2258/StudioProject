@@ -10,6 +10,8 @@ import EditWorkerForm from './EditWorkerForm';
 import ClientsList from './ClientsList';
 import AddWorkerForm from './AddWorkerForm';
 import MonthlyScheduleManager from './MonthlyScheduleManager';
+import '../App.css'; // Import the global CSS file
+import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg'; // הוסף בראש הקובץ
 
 // צבעים שונים לעובדים
 const workerColors = [
@@ -128,17 +130,32 @@ const AdminDashboard = () => {
     );
 
     return (
-        <Box sx={{
-            minHeight: '100vh',
-            width: '100vw',
-            background: `linear-gradient(135deg, #181828cc 0%, #23234acc 100%)`,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-            position: 'relative',
-            py: 5
-        }}>
+        <Box
+            sx={{
+                minHeight: '100vh',
+                width: '100vw',
+                background: `linear-gradient(135deg, #181828cc 0%, #23234acc 100%), url(${bgImg}) center/cover no-repeat`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                position: 'relative',
+                py: 5
+            }}
+        >
+            {/* דוגמת נקודות עדינה ברקע */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    pointerEvents: 'none',
+                    zIndex: 0,
+                    backgroundImage: `
+                        repeating-radial-gradient(circle, #43cea222 0px, #43cea222 1.5px, transparent 2.5px)
+                    `,
+                    opacity: 0.18
+                }}
+            />
             <Paper sx={{
                 maxWidth: 950,
                 width: '100%',
@@ -146,7 +163,8 @@ const AdminDashboard = () => {
                 p: { xs: 2, md: 4 },
                 position: 'relative',
                 boxShadow: "0 8px 32px 0 rgba(67,206,162,0.18), 0 1.5px 8px 0 #23234a",
-                background: "rgba(34, 34, 60, 0.97)"
+                background: "rgba(34, 34, 60, 0.97)",
+                zIndex: 1
             }}>
                 <Typography variant="h4" sx={{
                     color: "#43cea2",

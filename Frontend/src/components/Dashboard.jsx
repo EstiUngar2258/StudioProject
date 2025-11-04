@@ -4,7 +4,7 @@ import { toggleUserAppointments } from '../redux/userAppointmentsSlice';
 import UserAppointments from './UserAppointments';
 import { useNavigate } from 'react-router-dom';
 import bgImg from '../img/Music_Equalizer_5_by_Merlin2525.svg';
-import { setUser } from '../redux/authSlice'; // ודא שיש לך פעולה כזו
+import { setUser } from '../redux/authSlice'; 
 import HistoryAppointments from './HistoryAppointments';
 
 const Dashboard = () => {
@@ -193,9 +193,26 @@ const Dashboard = () => {
                                         onClick={() => navigate('/')}
                                     >
                                         <i className="bi bi-house-door me-2"></i>
-                                        דף הבית
+                                 דף הביתתת
                                     </button>
-
+                                    {/* כפתור חדש לעמוד dugma */}
+                                    <button
+                                        className="btn btn-lg rounded-pill shadow px-4"
+                                        style={{
+                                            background: "linear-gradient(90deg, #185a9d 0%, #43cea2 100%)",
+                                            border: "none",
+                                            fontWeight: 700,
+                                            fontSize: "1.08rem",
+                                            letterSpacing: "1px",
+                                            color: "#fff",
+                                            boxShadow: "0 4px 24px 0 #185a9db0",
+                                            transition: "opacity 0.6s, transform 0.6s"
+                                        }}
+                                        onClick={() => navigate('/Dugma')}
+                                    >
+                                        <i className="bi bi-lightning me-2"></i>
+                                        דוגמה
+                                    </button>
                                 </div>
                                 <div className="user-appointments" style={{ color: "#fff", position: "relative" }}>
                                     <div style={{ position: "relative", minHeight: 48 }}>

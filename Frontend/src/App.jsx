@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './components/About';
 import Home from './components/Home';
 import Navbar from './components/NavBar';
@@ -14,8 +14,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import WorkerDashboard from './components/WorkerDashbord';
 import AdminDashboard from './components/AdminDashboard';
+import Dugma from './components/Dugma';// Assuming dugma is a component in the
 
-
+components
 const App = () => {
   return (
     <BrowserRouter>
@@ -28,12 +29,13 @@ const App = () => {
           <Route path="/addClient" element={<AddClient />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dugma" element={<Dugma />} />
           <Route path="/workerDashboard" element={<WorkerDashboard />} />
           <Route path="/adminDashboard/" element={<AdminDashboard />} />
-             <Route path="/newAppointment/:courseId" element={<CreateAppointmentForm />} />
-          <Route path="/newAppointment" element={<CreateAppointmentForm />} /> // הוספת המסלול החדש
-          <Route path="/appointmentList" element={<AppointmentList />} /> // הוספת המסלול החדש
-          <Route path="/availableAppointments" element={<AvailableAppointmentsList />} /> // הוספת המסלול החדש
+          <Route path="/newAppointment/:courseId" element={<CreateAppointmentForm />} />
+          <Route path="/newAppointment" element={<CreateAppointmentForm />} />
+          <Route path="/appointmentList" element={<AppointmentList />} />
+          <Route path="/availableAppointments" element={<AvailableAppointmentsList />} />
         </Routes>
       </LocalizationProvider>
     </BrowserRouter>
